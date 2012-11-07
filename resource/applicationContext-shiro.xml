@@ -13,7 +13,7 @@
 	</bean>
 
 	<!-- 項目自定义的Realm -->
-	<bean id="shiroDbRealm" class="im.lich.gdms.core.security.ShiroDbRealm" />
+	<bean id="shiroDbRealm" class="tms.core.security.ShiroDbRealm" />
 
 	<!-- Shiro Filter -->
 	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
@@ -39,7 +39,7 @@
 		</property>
 	</bean>
 
-	<bean id="roleType" class="im.lich.gdms.core.security.RoleTypeFormAuthenticationFilter" />
+	<bean id="roleType" class="tms.core.security.RoleTypeFormAuthenticationFilter" />
 
 	<!-- 用户授权信息Cache -->
 	<bean id="cacheManager" class="org.apache.shiro.cache.MemoryConstrainedCacheManager" />

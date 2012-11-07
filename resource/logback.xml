@@ -30,7 +30,7 @@
 		</rollingPolicy>
 	</appender>
 	<!-- Logger -->
-	<logger name="im.lich.gdms" level="DEBUG" />
+	<logger name="tms" level="DEBUG" />
 	<root level="WARN">
 		<appender-ref ref="console" />
 		<!-- <appender-ref ref="logfile"/> -->
