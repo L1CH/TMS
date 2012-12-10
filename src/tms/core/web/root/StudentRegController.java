@@ -62,10 +62,10 @@ public class StudentRegController extends BaseController {
 		}
 
 		if (success) {
-			model.addAttribute("successMessage", "注册学生成功，请登录");
+			model.addAttribute("successMessage", "Reg success");
 			return "login";
 		} else {
-			model.addAttribute("errorMessage", "注册学生失败，请重新尝试。" + message);
+			model.addAttribute("errorMessage", "Reg fail" + message);
 			return showInfo(model);
 		}
 	}

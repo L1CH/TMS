@@ -65,7 +65,7 @@ public class StudentServiceImpl extends BaseServiceImpl implements StudentServic
 		logger.debug("注册新学生：{}", student);
 		String loginName = student.getLoginName();
 		if (loginName == null || studentDao.findByLoginName(loginName) != null) {
-			message.setMessage("该用户已经注册");
+			message.setMessage("User has been registered.");
 			return null;
 		}
 		return studentDao.save(student);
@@ -237,7 +237,7 @@ public class StudentServiceImpl extends BaseServiceImpl implements StudentServic
 			PingyueRecord _py = pingyueRecordDao.findByStudentId(s.getId());
 			if (_py != null && (py1 > 0 && py2 > 0)) {
 				Teacher _t = teacherDao.findOne(_py.getTeacherId());
-				status = "已输入：" + _t.getName();
+				status = "Input：" + _t.getName();
 			}
 
 			statuses.add(status);
@@ -257,7 +257,7 @@ public class StudentServiceImpl extends BaseServiceImpl implements StudentServic
 			DabianRecord _db = dabianRecordDao.findByStudentId(s.getId());
 			if (_db != null && (db1 > 0 && db2 > 0)) {
 				Teacher _t = teacherDao.findOne(_db.getTeacherId());
-				status = "已输入：" + _t.getName();
+				status = "Input：" + _t.getName();
 			}
 
 			statuses.add(status);

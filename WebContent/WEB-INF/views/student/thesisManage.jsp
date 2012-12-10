@@ -17,22 +17,22 @@
 	<c:if test="${success!=null&&!success}">
 		<div class="alert alert-block alert-error">
 			<a class="close" data-dismiss="alert" href="#">×</a>
-			<h4 class="alert-heading">failed，可能是该志愿顺被已经被使用</h4>
+			<h4 class="alert-heading">failed</h4>
 		</div>
 	</c:if>
 
 	<c:if test="${studentOrders.size()>0}">
-		<h3 align="center">Student个人预选信息</h3>
+		<h3 align="center">Student Preview</h3>
 		<table id="studentTable" class="table table-bordered">
 			<thead>
 				<tr>
 					<td>Order</td>
 					<td>Thesis name</td>
 					<td>Advisor</td>
-					<td>题目type</td>
-					<td>题目property</td>
-					<td>承担mode</td>
-					<td>已被预选次数</td>
+					<td>type</td>
+					<td>property</td>
+					<td>mode</td>
+					<td>Selected Times</td>
 					<td style="width: 140px;">operate</td>
 				</tr>
 			</thead>
@@ -41,16 +41,16 @@
 					<tr>
 						<c:choose>
 							<c:when test="${studentOrders[st.index]==1}">
-								<td class="thesisOrder">第一志愿</td>
+								<td class="thesisOrder">First</td>
 							</c:when>
 							<c:when test="${studentOrders[st.index]==2}">
-								<td class="thesisOrder">第二志愿</td>
+								<td class="thesisOrder">Second</td>
 							</c:when>
 							<c:when test="${studentOrders[st.index]==3}">
-								<td class="thesisOrder">第三志愿</td>
+								<td class="thesisOrder">Third</td>
 							</c:when>
 							<c:otherwise>
-								<td>志愿错误</td>
+								<td>Error</td>
 							</c:otherwise>
 						</c:choose>
 						<td>${studentThesis.name}</td>
@@ -68,17 +68,17 @@
 
 	<c:if test="${studentOrders.size()<3}">
 		<br />
-		<h3 align="center">选择Thesis</h3>
+		<h3 align="center">Thesis Choose</h3>
 
 		<table id="table" class="table table-bordered">
 			<thead>
 				<tr>
 					<td>Thesis name</td>
 					<td>Advisor</td>
-					<td>题目type</td>
-					<td>题目property</td>
-					<td>承担mode</td>
-					<td>已被预选次数</td>
+					<td>type</td>
+					<td>property</td>
+					<td>mode</td>
+					<td>Selected times</td>
 					<td style="width: 140px;">operate</td>
 				</tr>
 			</thead>
@@ -92,9 +92,9 @@
 						<td>${thesis.mode}</td>
 						<td>${counts[st.index]}</td>
 						<form action="${ctx}/student/thesisManage/choose/${thesis.id}" method="POST">
-							<td><select style="width: 90px" name="order"><option value="1">第一志愿</option>
-									<option value="2">第二志愿</option>
-									<option value="3">第三志愿</option></select><input type="submit" class="btn btn-primary btn-mini" value="选择"></input></td>
+							<td><select style="width: 90px" name="order"><option value="1">First</option>
+									<option value="2">Second</option>
+									<option value="3">Third</option></select><input type="submit" class="btn btn-primary btn-mini" value="选择"></input></td>
 						</form>
 					</tr>
 				</c:forEach>
@@ -115,11 +115,11 @@
 			});
 			$('.thesisOrder').each(function(){
 				var text = $(this).text();
-				if(text=="第一志愿")
+				if(text=="First")
 					$('select').find('option[value=1]').remove();
-				if(text=="第二志愿")
+				if(text=="Second")
 					$('select').find('option[value=2]').remove();
-				if(text=="第三志愿")
+				if(text=="Third")
 					$('select').find('option[value=3]').remove();
 			});
 		});

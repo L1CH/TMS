@@ -75,29 +75,29 @@ public class AdminServiceImpl extends BaseServiceImpl implements AdminService {
 	@Transactional(readOnly = false)
 	public boolean autoAssign(Message message) {
 		if (!autoAssignRoundOne()) {
-			message.getMessages().add("第一轮分配失败");
+			message.getMessages().add("Round 1 Failed");
 			return false;
 		} else {
-			message.getMessages().add("第一轮分配成功");
+			message.getMessages().add("Round 1 Success");
 		}
 
 		if (!autoAssignRoundTwo()) {
-			message.getMessages().add("第二轮分配失败");
+			message.getMessages().add("Round 2 Failed");
 			return false;
 		} else {
-			message.getMessages().add("第二轮分配成功");
+			message.getMessages().add("Round 2 Success");
 		}
 		if (!autoAssignRoundThree()) {
-			message.getMessages().add("第三轮分配失败");
+			message.getMessages().add("Round 3 Failed");
 			return false;
 		} else {
-			message.getMessages().add("第三轮分配成功");
+			message.getMessages().add("Round 3 Success");
 		}
 		if (!autoAssignRoundFour()) {
-			message.getMessages().add("第四轮分配失败");
+			message.getMessages().add("Round 4 Failed");
 			return false;
 		} else {
-			message.getMessages().add("第四轮分配成功");
+			message.getMessages().add("Round 4 Success");
 		}
 
 		return true;
