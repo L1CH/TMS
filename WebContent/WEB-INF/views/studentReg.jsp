@@ -6,24 +6,24 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>学生注册</title>
+<title>Student注册</title>
 </head>
 <body>
 	<div class="row">
 		<div class="span6 offset3">
-			<h2 align="center">学生注册</h2>
+			<h2 align="center">Student</h2>
 			<p>&nbsp</p>
 
 			<c:if test="${success!=null&&success}">
 				<div class="alert alert-block alert-success">
 					<a class="close" data-dismiss="alert" href="#">×</a>
-					<h4 class="alert-heading">修改成功</h4>
+					<h4 class="alert-heading">success</h4>
 				</div>
 			</c:if>
 			<c:if test="${success!=null&&!success}">
 				<div class="alert alert-block alert-error">
 					<a class="close" data-dismiss="alert" href="#">×</a>
-					<h4 class="alert-heading">修改失败</h4>
+					<h4 class="alert-heading">fail</h4>
 				</div>
 			</c:if>
 
@@ -32,59 +32,59 @@
 				<form:hidden path="id" />
 
 				<div class="control-group">
-					<label class="control-label">学号:</label>
+					<label class="control-label">no.:</label>
 					<div class="controls">
 						<form:input path="loginName" cssClass="input-xlarge" />
 					</div>
 				</div>
 
 				<div class="control-group">
-					<label class="control-label">密码:</label>
+					<label class="control-label">password:</label>
 					<div class="controls">
 						<form:password path="password" cssClass="input-xlarge" />
 					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label">确认密码:</label>
+					<label class="control-label">password again:</label>
 					<div class="controls">
 						<input type="password" id="rePassword" name="rePassword" class="input-xlarge">
 						<div id="password_error" class="alert alert-block alert-error" style="display: none;">
-							<p>密码输入不一致，请重新输入</p>
+							<p>passowrd not match</p>
 						</div>
 					</div>
 				</div>
 
 				<div class="control-group">
-					<label class="control-label">姓名:</label>
+					<label class="control-label">name:</label>
 					<div class="controls">
 						<form:input path="name" cssClass="input-xlarge" />
 					</div>
 				</div>
 
 				<div class="control-group">
-					<label class="control-label">性别:</label>
+					<label class="control-label">gender:</label>
 					<div class="controls">
 						<form:select path="gender" cssClass="input-xlarge">
-							<form:option value="男">男</form:option>
-							<form:option value="女">女</form:option>
+							<form:option value="男">Male</form:option>
+							<form:option value="女">Female</form:option>
 						</form:select>
 					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label">电话:</label>
+					<label class="control-label">phone:</label>
 					<div class="controls">
 						<form:input path="phone" cssClass="input-xlarge" />
 					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label">邮箱:</label>
+					<label class="control-label">mail:</label>
 					<div class="controls">
 						<form:input path="email" cssClass="input-xlarge" />
 					</div>
 				</div>
 
 				<div class="control-group">
-					<label class="control-label">专业:</label>
+					<label class="control-label">major:</label>
 					<div class="controls">
 						<form:select path="major" cssClass="input-xlarge">
 							<form:options items="${majors}" itemLabel="name" itemValue="name" />
@@ -93,7 +93,7 @@
 				</div>
 
 				<div class="control-group">
-					<label class="control-label">班级:</label>
+					<label class="control-label">class:</label>
 					<div class="controls">
 						<form:select path="stuClass" cssClass="input-xlarge">
 							<form:options items="${stuClasses}" itemLabel="name" itemValue="name" />
@@ -102,7 +102,7 @@
 				</div>
 
 				<div class="form-actions">
-					<input type="submit" class="btn btn-primary" value="注册" /> <input type="reset" class="btn" value="取消" />
+					<input type="submit" class="btn btn-primary" value="Reg" /> <input type="reset" class="btn" value="reset" />
 				</div>
 
 			</form:form>
@@ -113,7 +113,7 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#li-studentReg').addClass('active');
-			//校验两次密码
+			//校验两次password
 			$('#rePassword').keyup(function() {
 				if ($('#rePassword').val() != $('#password').val())
 					$('#password_error').show();

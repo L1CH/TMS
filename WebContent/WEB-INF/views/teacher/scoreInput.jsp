@@ -10,22 +10,22 @@
 </head>
 <body>
 	<ul id="tab" class="nav nav-tabs">
-		<li><a href="#zhidao" data-toggle="tab">指导教师成绩输入</a></li>
-		<li><a href="#pingyue" data-toggle="tab">评阅教师成绩输入</a></li>
-		<li><a href="#dabian" data-toggle="tab">答辩小组成绩输入</a></li>
+		<li><a href="#zhidao" data-toggle="tab">Advisor</a></li>
+		<li><a href="#pingyue" data-toggle="tab">Reviewer</a></li>
+		<li><a href="#dabian" data-toggle="tab">Oral Defense Team</a></li>
 	</ul>
 	<div id="tab-content" class="tab-content">
 		<div id="zhidao" class="tab-pane fade active in">
-			<h2>当前成绩状态</h2>
+			<h2>Status</h2>
 			<table class="table table-bordered">
 				<thead>
 					<tr>
-						<th>学号</th>
-						<th>姓名</th>
-						<th>课题名称</th>
-						<th>指导教师输入成绩状态</th>
-						<th>评阅教师输入成绩状态</th>
-						<th>答辩小组输入成绩状态</th>
+						<th>no.</th>
+						<th>name</th>
+						<th>Thesis name</th>
+						<th>Status of Advisor</th>
+						<th>Status of Reviewer</th>
+						<th>Status of Oral Defense Team</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -42,24 +42,24 @@
 				</tbody>
 			</table>
 
-			<h2>输入成绩</h2>
+			<h2>Score Input</h2>
 			<table class="table table-bordered">
 				<thead>
 					<tr>
-						<th rowspan="2" style="vertical-align: middle;">学号</th>
-						<th rowspan="2" style="vertical-align: middle;">姓名</th>
-						<th rowspan="2" style="vertical-align: middle;">课题名称</th>
-						<th>毕业设计(论文)质量</th>
-						<th>绘图与文字表达技巧</th>
-						<th>独立工作能力</th>
-						<th>工作态度</th>
-						<th rowspan="2" style="vertical-align: middle;">操作</th>
+						<th rowspan="2" style="vertical-align: middle;">no.</th>
+						<th rowspan="2" style="vertical-align: middle;">name</th>
+						<th rowspan="2" style="vertical-align: middle;">Thesis name</th>
+						<th>Thesis (paper) quantity</th>
+						<th>Expression</th>
+						<th>Solving</th>
+						<th>Attitude</th>
+						<th rowspan="2" style="vertical-align: middle;">operate</th>
 					</tr>
 					<tr>
-						<th>折合系数: 0.15</th>
-						<th>折合系数: 0.05</th>
-						<th>折合系数: 0.05</th>
-						<th>折合系数: 0.05</th>
+						<th>ratio:0.15</th>
+						<th>ratio:0.05</th>
+						<th>ratio:0.05</th>
+						<th>ratio:0.05</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -73,7 +73,7 @@
 								<td><input type="text" name="zd2grade" value="${student.zd2grade}" class="input-mini" /></td>
 								<td><input type="text" name="zd3grade" value="${student.zd3grade}" class="input-mini" /></td>
 								<td><input type="text" name="zd4grade" value="${student.zd4grade}" class="input-mini" /></td>
-								<td><input type="submit" class="btn btn-primary btn-mini" value="更新" />&nbsp;<a
+								<td><input type="submit" class="btn btn-primary btn-mini" value="Mod" />&nbsp;<a
 									href="${ctx}/teacher/pingyuInput/zhidao/${student.loginName}" class="btn btn-primary btn-mini">评语</a></td>
 							</tr>
 						</form>
@@ -83,20 +83,20 @@
 		</div>
 
 		<div id="pingyue" class="tab-pane fade">
-			<h2>评阅教师输入</h2>
+			<h2>Reviewer</h2>
 			<table class="table table-bordered">
 				<thead>
 					<tr>
-						<th rowspan="2" style="vertical-align: middle;">学号</th>
-						<th rowspan="2" style="vertical-align: middle;">姓名</th>
-						<th rowspan="2" style="vertical-align: middle;">课题名称</th>
-						<th>毕业设计(论文)水平</th>
-						<th>图、文质量</th>
-						<th rowspan="2" style="vertical-align: middle;">操作</th>
+						<th rowspan="2" style="vertical-align: middle;">no.</th>
+						<th rowspan="2" style="vertical-align: middle;">name</th>
+						<th rowspan="2" style="vertical-align: middle;">Thesis name</th>
+						<th>Thesis (paper) Quantity</th>
+						<th>Expression quantity</th>
+						<th rowspan="2" style="vertical-align: middle;">operate</th>
 					</tr>
 					<tr>
-						<th>折合系数: 0.2</th>
-						<th>折合系数: 0.1</th>
+						<th>ratio:0.2</th>
+						<th>ratio:0.1</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -107,7 +107,7 @@
 							<td>${pingyueStudentsThesises[st.index].name}</td>
 							<td>${student.py1grade}</td>
 							<td>${student.py2grade}</td>
-							<td><a href="${ctx}/teacher/scoreInput/pingyue/del/${student.loginName}" class="btn btn-mini">删除</a>&nbsp;<a
+							<td><a href="${ctx}/teacher/scoreInput/pingyue/del/${student.loginName}" class="btn btn-mini">Del</a>&nbsp;<a
 								href="${ctx}/teacher/pingyuInput/pingyue/${student.loginName}" class="btn btn-primary btn-mini">评语</a></td>
 						</tr>
 					</c:forEach>
@@ -118,7 +118,7 @@
 							<td></td>
 							<td><input type="text" class="input-mini" name="py1grade" /></td>
 							<td><input type="text" class="input-mini" name="py2grade" /></td>
-							<td><input type="submit" class="btn btn-primary btn-mini" value="添加" /></td>
+							<td><input type="submit" class="btn btn-primary btn-mini" value="Add" /></td>
 						</tr>
 					</form>
 				</tbody>
@@ -126,20 +126,20 @@
 		</div>
 
 		<div id="dabian" class="tab-pane fade">
-			<h2>答辩小组输入</h2>
+			<h2>Oral Defense Team</h2>
 			<table class="table table-bordered">
 				<thead>
 					<tr>
-						<th rowspan="2" style="vertical-align: middle;">学号</th>
-						<th rowspan="2" style="vertical-align: middle;">姓名</th>
-						<th rowspan="2" style="vertical-align: middle;">课题名称</th>
-						<th>口头汇报</th>
-						<th>回答问题正确性</th>
-						<th rowspan="2" style="vertical-align: middle;">操作</th>
+						<th rowspan="2" style="vertical-align: middle;">no.</th>
+						<th rowspan="2" style="vertical-align: middle;">name</th>
+						<th rowspan="2" style="vertical-align: middle;">Thesis name</th>
+						<th>Oral Presentation</th>
+						<th>Answer Skill</th>
+						<th rowspan="2" style="vertical-align: middle;">operate</th>
 					</tr>
 					<tr>
-						<th>折合系数: 0.1</th>
-						<th>折合系数: 0.3</th>
+						<th>ratio:0.1</th>
+						<th>ratio:0.3</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -150,7 +150,7 @@
 							<td>${dabianStudentsThesises[st.index].name}</td>
 							<td>${student.db1grade}</td>
 							<td>${student.db2grade}</td>
-							<td><a href="${ctx}/teacher/scoreInput/dabian/del/${student.loginName}" class="btn btn-mini">删除</a>&nbsp;<a
+							<td><a href="${ctx}/teacher/scoreInput/dabian/del/${student.loginName}" class="btn btn-mini">Del</a>&nbsp;<a
 								href="${ctx}/teacher/pingyuInput/dabian/${student.loginName}" class="btn btn-primary btn-mini">评语</a></td>
 						</tr>
 					</c:forEach>
@@ -161,7 +161,7 @@
 							<td></td>
 							<td><input type="text" class="input-mini" name="db1grade" /></td>
 							<td><input type="text" class="input-mini" name="db2grade" /></td>
-							<td><input type="submit" class="btn btn-primary btn-mini" value="添加" /></td>
+							<td><input type="submit" class="btn btn-primary btn-mini" value="Add" /></td>
 						</tr>
 					</form>
 				</tbody>
@@ -169,14 +169,14 @@
 		</div>
 	</div>
 
-	<h3>评分标准</h3>
+	<h3>Level</h3>
 	<table class="table table-bordered">
 		<tr>
-			<td>优</td>
-			<td>良</td>
-			<td>中</td>
-			<td>及格</td>
-			<td>不及格</td>
+			<td>A</td>
+			<td>B</td>
+			<td>C</td>
+			<td>D</td>
+			<td>F</td>
 		</tr>
 		<tr>
 			<td>85～100</td>

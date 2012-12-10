@@ -22,12 +22,12 @@ public class Teacher extends IdEntity implements User {
 	private static final long serialVersionUID = 5919308243195296451L;
 
 	private String loginName;//教工号
-	private String name = "";//姓名
-	private String password = "0";//密码
+	private String name = "";//name
+	private String password = "0";//password
 	private String dept = "";//部门
 	private Integer subnum = 0;//可指导学生数、课题数
-	private String tel = "";//电话
-	private String mail = "";//邮箱
+	private String tel = "";//phone
+	private String mail = "";//mail
 	private Set<Thesis> thesises = new HashSet<Thesis>();//教师的课题
 
 	public Teacher() {

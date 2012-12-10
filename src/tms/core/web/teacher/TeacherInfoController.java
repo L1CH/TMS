@@ -46,7 +46,7 @@ public class TeacherInfoController extends BaseController {
 		logger.debug("POST-postInfo");
 
 		logger.debug("网页获取信息：{}", teacher);
-		//强制指定用户登录名
+		//强制指定用户no.
 		String loginName = SecurityUtils.getSubject().getPrincipal().toString();
 		teacher.setLoginName(loginName);
 

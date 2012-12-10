@@ -6,10 +6,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>主页</title>
+<title>Student Thesis Preview</title>
 </head>
 <body>
-	<h2 style="text-align: center;">查看学生课题预选情况</h2>
+	<h2 style="text-align: center;">Student Thesis Preview</h2>
 	<p>&nbsp;</p>
 
 	<div class="row">
@@ -17,23 +17,23 @@
 			<c:if test="${(success!=null&&success)||(param.success!=null&&param.success)}">
 				<div class="alert alert-block alert-success">
 					<a class="close" data-dismiss="alert" href="#">×</a>
-					<h4 class="alert-heading">操作成功</h4>
+					<h4 class="alert-heading">success</h4>
 				</div>
 			</c:if>
 			<c:if test="${(success!=null&&!success)||(param.success!=null&&!param.success)}">
 				<div class="alert alert-block alert-warn">
 					<a class="close" data-dismiss="alert" href="#">×</a>
-					<h4 class="alert-heading">操作失败</h4>
+					<h4 class="alert-heading">failed</h4>
 				</div>
 			</c:if>
 
 			<table id="table" class="table table-bordered">
 				<thead>
 					<tr>
-						<th style="vertical-align: middle;">课题名称</th>
-						<th style="vertical-align: middle;">志愿顺序</th>
-						<th style="vertical-align: middle;">学生名称</th>
-						<th style="vertical-align: middle;" width="100px">操作</th>
+						<th style="vertical-align: middle;">Thesis name</th>
+						<th style="vertical-align: middle;">Order</th>
+						<th style="vertical-align: middle;">Student name</th>
+						<th style="vertical-align: middle;" width="100px">operate</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -44,7 +44,7 @@
 							<td>${students[st.index].name}</td>
 							<c:if test="${assigns[st.index]=='0'}">
 								<td><a href="${ctx}/teacher/thesisPreview/assign/${thesis.id}/${students[st.index].id}"
-									class="btn btn-primary btn-mini">优先录取</a></td>
+									class="btn btn-primary btn-mini">Pre-Assign</a></td>
 							</c:if>
 							<c:if test="${assigns[st.index]!='0'}">
 								<td>${assigns[st.index]}</td>

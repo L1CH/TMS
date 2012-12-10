@@ -30,7 +30,7 @@ public class StudentThesisChooseController extends BaseController {
 		String studentLoginName = SecurityUtils.getSubject().getPrincipal().toString();
 
 		if (thesisService.isAssigned(studentLoginName)) {
-			model.addAttribute("warnMessage", "课题已经分配，无法使用课题预选功能");
+			model.addAttribute("warnMessage", "Thesis already assigned, cannot use preview");
 			return "redirect:/message";
 		}
 

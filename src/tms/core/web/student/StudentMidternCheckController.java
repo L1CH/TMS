@@ -39,7 +39,7 @@ public class StudentMidternCheckController extends BaseController {
 		logger.debug("POST-postMidternCheck");
 
 		logger.debug("网页获取信息：{}", student);
-		//强制指定用户登录名
+		//强制指定用户no.
 		String loginName = SecurityUtils.getSubject().getPrincipal().toString();
 		student.setLoginName(loginName);
 

@@ -37,11 +37,11 @@ public class StudentRegController extends BaseController {
 
 		model.addAttribute("student", new Student());
 
-		//添加专业列表
+		//添加major列表
 		List<StudentMajor> majors = studentMajorService.getStudentMajors();
 		model.addAttribute("majors", majors);
 
-		//添加班级列表
+		//添加class列表
 		List<StudentClass> stuClasses = studentClassService.getStudentClasses();
 		model.addAttribute("stuClasses", stuClasses);
 

@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>主页</title>
+<title>Thesis</title>
 </head>
 <body>
 	<div class="row">
@@ -14,13 +14,13 @@
 			<c:if test="${(success!=null&&success)||(param.success!=null&&param.success)}">
 				<div class="alert alert-block alert-success">
 					<a class="close" data-dismiss="alert" href="#">×</a>
-					<h4 class="alert-heading">操作成功</h4>
+					<h4 class="alert-heading">success</h4>
 				</div>
 			</c:if>
 			<c:if test="${(success!=null&&!success)||(param.success!=null&&!param.success)}">
 				<div class="alert alert-block alert-warn">
 					<a class="close" data-dismiss="alert" href="#">×</a>
-					<h4 class="alert-heading">操作失败</h4>
+					<h4 class="alert-heading">failed</h4>
 				</div>
 			</c:if>
 		</div>
@@ -29,20 +29,20 @@
 	<!-- /row -->
 
 	<p>&nbsp;</p>
-	<h2 style="text-align: center;">课题信息管理</h2>
+	<h2 style="text-align: center;">Thesis</h2>
 
 	<div class="row">
 		<div class="span10 offset1">
 			<table id="table" class="table table-bordered">
 				<thead>
 					<tr>
-						<th style="vertical-align: middle;">课题名称</th>
-						<th style="vertical-align: middle;">教师名称</th>
-						<th style="vertical-align: middle;">类型</th>
-						<th style="vertical-align: middle;">性质</th>
-						<th style="vertical-align: middle;">方式</th>
-						<th style="vertical-align: middle;" width="80px">可选专业</th>
-						<th style="vertical-align: middle;" width="80px">操作</th>
+						<th style="vertical-align: middle;">Thesis name</th>
+						<th style="vertical-align: middle;">Teacher name</th>
+						<th style="vertical-align: middle;">type</th>
+						<th style="vertical-align: middle;">property</th>
+						<th style="vertical-align: middle;">mode</th>
+						<th style="vertical-align: middle;" width="80px">available major</th>
+						<th style="vertical-align: middle;" width="80px">operate</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -54,18 +54,18 @@
 							<td>${thesis.property}</td>
 							<td>${thesis.mode}</td>
 							<c:if test="${thesis.majorRestrict!=''}">
-								<td><a href="#" rel="tooltip" data-original-title="${thesis.majorRestrict}">点击查看</a></td>
+								<td><a href="#" rel="tooltip" data-original-title="${thesis.majorRestrict}">click to view</a></td>
 							</c:if>
 							<c:if test="${thesis.majorRestrict==''}">
-								<td>无专业</td>
+								<td>no major</td>
 							</c:if>
-							<td><a href="${ctx}/admin/thesisManage/mod/${thesis.id}" class="btn btn-primary btn-mini">修改</a>&nbsp;<a
-								href="${ctx}/admin/thesisManage/del/${thesis.id}" class="btn btn-danger btn-mini">删除</a></td>
+							<td><a href="${ctx}/admin/thesisManage/mod/${thesis.id}" class="btn btn-primary btn-mini">Mod</a>&nbsp;<a
+								href="${ctx}/admin/thesisManage/del/${thesis.id}" class="btn btn-danger btn-mini">Del</a></td>
 						</tr>
 					</c:forEach>
 				</tbody>
 			</table>
-			<a class="btn btn-info pull-right" data-toggle="collapse" href="#add">添加课题</a>
+			<a class="btn btn-info pull-right" data-toggle="collapse" href="#add">AddThesis</a>
 		</div>
 		<!-- /span8 offset2 -->
 	</div>
@@ -76,56 +76,56 @@
 			<div id="add" class="collapse in">
 				<form:form modelAttribute="thesis" action="${ctx}/admin/thesisManage/add" cssClass="form-horizontal">
 					<div class="control-group">
-						<label class="control-label">教工号:</label>
+						<label class="control-label">no.:</label>
 						<div class="controls">
 							<input id="teacherLoginName" name="teacherLoginName" type="text" />
 						</div>
 					</div>
 
 					<div class="control-group">
-						<label class="control-label">课题名称:</label>
+						<label class="control-label">Thesis name:</label>
 						<div class="controls">
 							<form:input path="name" />
 						</div>
 					</div>
 
 					<div class="control-group">
-						<label class="control-label">类型:</label>
+						<label class="control-label">type:</label>
 						<div class="controls">
 							<form:select path="type" cssClass="input-xlarge">
-								<form:option value="类型1">类型1</form:option>
+								<form:option value="type1">type1</form:option>
 							</form:select>
 						</div>
 					</div>
 
 					<div class="control-group">
-						<label class="control-label">性质:</label>
+						<label class="control-label">property:</label>
 						<div class="controls">
 							<form:select path="property" cssClass="input-xlarge">
-								<form:option value="性质1">性质1</form:option>
+								<form:option value="property1">property1</form:option>
 							</form:select>
 						</div>
 					</div>
 
 					<div class="control-group">
-						<label class="control-label">方式:</label>
+						<label class="control-label">mode:</label>
 						<div class="controls">
 							<form:select path="mode" cssClass="input-xlarge">
-								<form:option value="方式1">方式1</form:option>
+								<form:option value="mode1">mode1</form:option>
 							</form:select>
 						</div>
 					</div>
 
 					<div class="control-group">
-						<label class="control-label">可选专业:</label>
+						<label class="control-label">available major:</label>
 						<div class="controls">
 							<label class="checkbox"><form:checkboxes items="${majors}" path="majorRes" itemLabel="name"
-									itemValue="name" /><input id="majorResAll" type="checkbox">全选</input></label>
+									itemValue="name" /><input id="majorResAll" type="checkbox">All</input></label>
 						</div>
 					</div>
 
 					<div class="form-actions">
-						<input type="submit" class="btn btn-primary" value="添加" /> <input type="reset" class="btn" value="取消" />
+						<input type="submit" class="btn btn-primary" value="Add" /> <input type="reset" class="btn" value="cancel" />
 					</div>
 
 				</form:form>

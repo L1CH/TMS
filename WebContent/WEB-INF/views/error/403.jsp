@@ -8,7 +8,7 @@
 <c:set var="ctx" value="${pageContext.request.contextPath}" />
 <html>
 <head>
-<title>403 - 用户权限不足</title>
+<title>403 - No permission</title>
 </head>
 
 <body>
@@ -16,11 +16,11 @@
 		<div class="span6 offset3">
 			<div class="alert alert-block alert-warn">
 				<a class="close" data-dismiss="alert" href="#">×</a>
-				<h3 class="alert-heading">用户权限不足.</h3>
-				<p>管理员可能关闭了该项操作的权限.</p>
+				<h3 class="alert-heading">No permission</h3>
+				<p>Admin does not allow users to do so.</p>
 				<p>
-					<a href="javascript:history.back()">点此返回上一页</a><br />
-					<a href="${ctx}/">点此返回首页</a>
+					<a href="javascript:history.back()">Return</a><br />
+					<a href="${ctx}/">Return</a>
 				</p>
 			</div>
 		</div>

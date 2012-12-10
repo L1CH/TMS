@@ -32,138 +32,134 @@
 <body>
 	<div class="container">
 		<div id="header" class="jumbotron masthead" style="margin-top: 20px; margin-bottom: 10px;">
-			<h1>毕业设计管理系统</h1>
-			<p>Graduation Design Management System</p>
+			<h1>T M S</h1>
+			<p>Thesis Management System</p>
 		</div>
 
 		<div id="menu" class="row">
 			<div class="span12">
 				<ul id="menu" class="nav nav-pills">
-					<li id="li-index"><a href="${ctx}/">首页</a></li>
+					<li id="li-index"><a href="${ctx}/">Index</a></li>
 
 					<!-- 主页链接 -->
 					<!--
 				<shiro:hasRole name="ROLE_STUDENT">
-					<li id="li-student_index"><a href="${ctx}/student/index">学生主页</a></li>
+					<li id="li-student_index"><a href="${ctx}/student/index">Student主页</a></li>
 				</shiro:hasRole>
 				<shiro:hasRole name="ROLE_TEACHER">
-					<li id="li-teacher_index"><a href="${ctx}/teacher/index">教师主页</a></li>
+					<li id="li-teacher_index"><a href="${ctx}/teacher/index">Teacher主页</a></li>
 				</shiro:hasRole>
 				<shiro:hasRole name="ROLE_ADMIN">
-					<li id="li-admin_index"><a href="${ctx}/admin/index">管理员主页</a></li>
+					<li id="li-admin_index"><a href="${ctx}/admin/index">Admin主页</a></li>
 				</shiro:hasRole>
 				-->
 					<!-- /主页链接 -->
 					<shiro:guest>
-						<li id="li-studentReg"><a href="${ctx}/studentReg">学生注册</a></li>
+						<li id="li-studentReg"><a href="${ctx}/studentReg">Student Reg</a></li>
 					</shiro:guest>
 
-					<!-- 学生菜单 -->
+					<!-- Student菜单 -->
 					<shiro:hasAnyRoles name="ROLE_STUDENT">
-						<li id="li-student_info"><a href="${ctx}/student/info">个人信息</a></li>
+						<li id="li-student_info"><a href="${ctx}/student/info">Info</a></li>
 
-						<li id="li-student_thesis" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">选课模块<b
+						<li id="li-student_thesis" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Thesis<b
 								class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="${ctx}/student/thesisManage">选择、管理预选课题</a></li>
-								<li><a href="${ctx}/student/thesisResult">查看课题分配结果</a></li>
+								<li><a href="${ctx}/student/thesisManage">Thesis Manage</a></li>
+								<li><a href="${ctx}/student/thesisResult">Thesis Result</a></li>
 							</ul></li>
 
-						<li id="li-student_file"><a href="${ctx}/student/fileManage">文件管理</a></li>
+						<li id="li-student_file"><a href="${ctx}/student/fileManage">File</a></li>
 
-						<li id="li-student_score" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">成绩管理<b
+						<li id="li-student_score" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Score<b
 								class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="${ctx}/student/midternCheck">中期检查</a></li>
-								<!--<li><a href="${ctx}/student/dabianInput">答辩信息输入</a></li>-->
-								<li><a href="${ctx}/student/finalScore">查看最后成绩</a></li>
+								<li><a href="${ctx}/student/midternCheck">Midtern Check</a></li>
+								<li><a href="${ctx}/student/finalScore">Final Score</a></li>
 							</ul></li>
 
 					</shiro:hasAnyRoles>
-					<!-- /学生菜单 -->
+					<!-- /Student菜单 -->
 
-					<!-- 教师菜单 -->
+					<!-- Teacher菜单 -->
 					<shiro:hasRole name="ROLE_TEACHER">
-						<li id="li-teacher_info"><a href="${ctx}/teacher/info">个人信息</a></li>
-						<li id="li-teacher_thesis" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">课题管理<b
+						<li id="li-teacher_info"><a href="${ctx}/teacher/info">Info</a></li>
+						<li id="li-teacher_thesis" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Thesis<b
 								class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<!--<li><a href="${ctx}/teacher/projectAdd">注册新的课题</a></li>-->
-								<li><a href="${ctx}/teacher/thesisManage">管理您的课题信息</a></li>
-								<li><a href="${ctx}/teacher/thesisAssign">管理您的课题分配信息</a></li>
-								<li><a href="${ctx}/teacher/thesisPreview">查看学生预选情况</a></li>
-								<!--<li><a href="${ctx}/teacher/projectReassign">为学生重新分配课题</a></li>
-							<li><a href="${ctx}/teacher/projectChangeName">为学生更改课题名称</a></li>-->
+								<li><a href="${ctx}/teacher/thesisManage">Thesis Info</a></li>
+								<li><a href="${ctx}/teacher/thesisAssign">Thesis Assign</a></li>
+								<li><a href="${ctx}/teacher/thesisPreview">Thesis Preview</a></li>
 							</ul></li>
 
-						<li id="li-teacher_file" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">文件管理<b
+						<li id="li-teacher_file" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">File<b
 								class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="${ctx}/teacher/fileManage">文档管理</a></li>
-								<li><a href="${ctx}/teacher/printManage">打印管理</a></li>
+								<li><a href="${ctx}/teacher/fileManage">File</a></li>
+								<li><a href="${ctx}/teacher/printManage">Print</a></li>
 							</ul></li>
 
-						<li id="li-teacher_score" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">成绩管理<b
+						<li id="li-teacher_score" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Score<b
 								class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="${ctx}/teacher/midternCheck">中期检查</a></li>
-								<li><a href="${ctx}/teacher/scoreInput">输入学生论文成绩和评语</a></li>
+								<li><a href="${ctx}/teacher/midternCheck">Midtern Check</a></li>
+								<li><a href="${ctx}/teacher/scoreInput">Input</a></li>
 								<!--<li><a href="${ctx}/teacher/scoreSplit">分数拆分</a></li>-->
 							</ul></li>
 
 					</shiro:hasRole>
-					<!-- /教师菜单 -->
+					<!-- /Teacher菜单 -->
 
-					<!-- 管理员菜单 -->
+					<!-- Admin菜单 -->
 					<shiro:hasRole name="ROLE_ADMIN">
-						<!--<li id="li-admin_info"><a href="${ctx}/admin/info">个人信息</a></li>-->
-						<li id="li-admin_news"><a href="${ctx}/admin/newsManage">信息发布</a></li>
-						<li id="li-admin_people" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">人员、组织管理<b
+						<!--<li id="li-admin_info"><a href="${ctx}/admin/info">Info</a></li>-->
+						<li id="li-admin_news"><a href="${ctx}/admin/newsManage">News</a></li>
+						<li id="li-admin_people" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Users<b
 								class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="${ctx}/admin/adminManage">管理员管理</a></li>
-								<li><a href="${ctx}/admin/teacherManage">教师管理</a></li>
-								<li><a href="${ctx}/admin/teacherDeptManage">教师部门管理</a></li>
-								<li><a href="${ctx}/admin/studentManage">学生管理</a></li>
-								<li><a href="${ctx}/admin/studentMajorClassManage">学生专业、班级管理</a></li>
+								<li><a href="${ctx}/admin/adminManage">Admin</a></li>
+								<li><a href="${ctx}/admin/teacherManage">Teacher</a></li>
+								<li><a href="${ctx}/admin/teacherDeptManage">Teacher Dept</a></li>
+								<li><a href="${ctx}/admin/studentManage">Student</a></li>
+								<li><a href="${ctx}/admin/studentMajorClassManage">Major/Class</a></li>
 							</ul></li>
 
-						<li id="li-admin_material" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">材料管理<b
+						<li id="li-admin_material" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Material<b
 								class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="${ctx}/admin/paperManage">优秀论文管理</a></li>
-								<li><a href="${ctx}/admin/commentTempleManage">评语模板管理</a></li>
+								<li><a href="${ctx}/admin/paperManage">Thesis Temple</a></li>
+								<!--<li><a href="${ctx}/admin/commentTempleManage">Comment Temple</a></li>-->
 							</ul></li>
 
-						<li id="li-admin_thesis" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">选课信息管理<b
+						<li id="li-admin_thesis" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Thesis<b
 								class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="${ctx}/admin/thesisManage">课题信息管理</a></li>
-								<li><a href="${ctx}/admin/thesisPreview">学生预选信息管理</a></li>
-								<li><a href="${ctx}/admin/thesisAssign">课题分配信息管理</a></li>
-								<li><a href="${ctx}/admin/studentAssign">学生分配信息管理</a></li>
-								<li><a href="${ctx}/admin/autoAssign">自动分配操作</a></li>
+								<li><a href="${ctx}/admin/thesisManage">Thesis</a></li>
+								<li><a href="${ctx}/admin/thesisPreview">Preview</a></li>
+								<li><a href="${ctx}/admin/thesisAssign">Thesis Assign</a></li>
+								<li><a href="${ctx}/admin/studentAssign">Student Assign</a></li>
+								<li><a href="${ctx}/admin/autoAssign">Auto Assign</a></li>
 							</ul></li>
 
-						<li id="li-admin_system" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">系统管理<b
+						<li id="li-admin_system" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">System<b
 								class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="${ctx}/admin/dbOperate">数据库操作</a></li>
-								<li><a href="${ctx}/admin/view">查看视图</a></li>
-								<li><a href="${ctx}/admin/printManage">打印管理</a></li>
-								<li><a href="${ctx}/admin/sysProperty">后台属性管理</a></li>
+								<li><a href="${ctx}/admin/dbOperate">DB</a></li>
+								<li><a href="${ctx}/admin/view">View</a></li>
+								<li><a href="${ctx}/admin/printManage">Print</a></li>
+								<li><a href="${ctx}/admin/sysProperty">Properties</a></li>
 							</ul></li>
 					</shiro:hasRole>
-					<!-- /管理员菜单 -->
+					<!-- /Admin菜单 -->
 
 					<!-- 用户信息、登录注销 -->
 					<shiro:guest>
-						<li style="float: right;"><a href="${ctx}/login" class="btn" style="background-color: #E6E6E6;">登录</a></li>
-						<li style="float: right;"><a>用户未登录!</a></li>
+						<li style="float: right;"><a href="${ctx}/login" class="btn" style="background-color: #E6E6E6;">Login</a></li>
+						<li style="float: right;"><a>Not Login!</a></li>
 					</shiro:guest>
 					<shiro:user>
-						<li style="float: right;"><a href="${ctx}/logout" class="btn" style="background-color: #E6E6E6;">注销</a></li>
-						<li style="float: right;"><a>当前用户: <shiro:principal property="name" />&nbsp(<shiro:principal />)&nbsp
+						<li style="float: right;"><a href="${ctx}/logout" class="btn" style="background-color: #E6E6E6;">Logout</a></li>
+						<li style="float: right;"><a>Current: <shiro:principal property="name" />&nbsp(<shiro:principal />)&nbsp
 						</a></li>
 					</shiro:user>
 					<!-- /用户信息、登录注销 -->
@@ -181,7 +177,7 @@
 						<c:if test="${successMessage!=null}">
 							<div class="alert alert-block alert-success">
 								<a class="close" data-dismiss="alert" href="#">×</a>
-								<h4 class="alert-heading">成功！</h4>
+								<h4 class="alert-heading">Success！</h4>
 								<p>${successMessage}</p>
 							</div>
 						</c:if>
@@ -190,25 +186,25 @@
 						<c:if test="${infoMessage!=null}">
 							<div class="alert alert-block alert-info">
 								<a class="close" data-dismiss="alert" href="#">×</a>
-								<h4 class="alert-heading">提示消息</h4>
+								<h4 class="alert-heading">Info</h4>
 								<p>${infoMessage}</p>
 							</div>
 						</c:if>
 						<!-- /提示消息 -->
-						<!-- 警告消息 -->
+						<!--  Warn消息 -->
 						<c:if test="${warnMessage!=null}">
 							<div class="alert alert-block">
 								<a class="close" data-dismiss="alert" href="#">×</a>
-								<h4 class="alert-heading">警告消息</h4>
+								<h4 class="alert-heading">Warn</h4>
 								<p>${warnMessage}</p>
 							</div>
 						</c:if>
-						<!-- /警告消息 -->
+						<!-- / Warn消息 -->
 						<!-- 错误消息 -->
 						<c:if test="${errorMessage!=null}">
 							<div class="alert alert-block alert-error">
 								<a class="close" data-dismiss="alert" href="#">×</a>
-								<h4 class="alert-heading">错误消息</h4>
+								<h4 class="alert-heading">Error</h4>
 								<p>${errorMessage}</p>
 							</div>
 						</c:if>
@@ -231,9 +227,9 @@
 		<hr>
 
 		<div id="footer" style="text-align: center;">
-			<p>&copy; 东华大学计算机学院 2012</p>
+			<p>&copy; Qiyu Li, Junyi Hu 2012</p>
 			<p>
-				联系人:石秀金 邮箱:<a href="mailto:sxj@dhu.edu.cn">sxj@dhu.edu.cn</a>
+				Contact:<a href="mailto:johnnyli@gwu.edu">johnnyli@gwu.edu</a>
 			</p>
 		</div>
 

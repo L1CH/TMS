@@ -14,13 +14,13 @@
 			<c:if test="${(success!=null&&success)||(param.success!=null&&param.success)}">
 				<div class="alert alert-block alert-success">
 					<a class="close" data-dismiss="alert" href="#">×</a>
-					<h4 class="alert-heading">操作成功</h4>
+					<h4 class="alert-heading">success</h4>
 				</div>
 			</c:if>
 			<c:if test="${(success!=null&&!success)||(param.success!=null&&!param.success)}">
 				<div class="alert alert-block alert-warn">
 					<a class="close" data-dismiss="alert" href="#">×</a>
-					<h4 class="alert-heading">操作失败</h4>
+					<h4 class="alert-heading">failed</h4>
 				</div>
 			</c:if>
 		</div>
@@ -31,10 +31,10 @@
 	<div class="row">
 		<div class="span4 offset4">
 			<p>&nbsp;</p>
-			<h2 style="text-align: center;">数据库操作</h2>
+			<h2 style="text-align: center;">Db operate</h2>
 			<p>&nbsp;</p>
 
-			<a href="${ctx}/admin/dbOperate/clear" class="btn">清空数据库缓存</a>
+			<a href="${ctx}/admin/dbOperate/clear" class="btn">Clear DB Cache</a>
 		</div>
 		<!-- /span8 offset2 -->
 	</div>

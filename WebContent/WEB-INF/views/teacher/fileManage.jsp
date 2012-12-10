@@ -6,22 +6,22 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>主页</title>
+<title>Student File</title>
 </head>
 <body>
-	<h2>查看学生上传文件</h2>
+	<h2>Student File</h2>
 	<p>&nbsp;</p>
 
 	<table class="table table-bordered">
 		<thead>
 			<tr>
-				<th style="vertical-align: middle;">学号</th>
-				<th style="vertical-align: middle;">姓名</th>
-				<th style="vertical-align: middle;">课题名称</th>
-				<th style="vertical-align: middle;">开题报告</th>
-				<th style="vertical-align: middle;">任务书</th>
-				<th style="vertical-align: middle;">翻译</th>
-				<th style="vertical-align: middle;">论文</th>
+				<th style="vertical-align: middle;">no.</th>
+				<th style="vertical-align: middle;">name</th>
+				<th style="vertical-align: middle;">Thesis name</th>
+				<th style="vertical-align: middle;">abstract</th>
+				<th style="vertical-align: middle;">schedule</th>
+				<th style="vertical-align: middle;">reference</th>
+				<th style="vertical-align: middle;">paper</th>
 			</tr>
 		</thead>
 		<tbody>

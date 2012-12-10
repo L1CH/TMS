@@ -17,7 +17,7 @@ public interface PingyueService extends BaseService {
 
 	/**
 	 * 获取评阅教师填写成绩的学生
-	 * @param teacherLoginName 教师登录名、教工号
+	 * @param teacherLoginName 教师no.、教工号
 	 * @return List<Student>
 	 */
 	public List<Student> getStudents(String teacherLoginName);

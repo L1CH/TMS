@@ -14,25 +14,25 @@
 			<c:if test="${(success!=null&&success)||(param.success!=null&&param.success)}">
 				<div class="alert alert-block alert-success">
 					<a class="close" data-dismiss="alert" href="#">×</a>
-					<h4 class="alert-heading">操作成功</h4>
+					<h4 class="alert-heading">success</h4>
 				</div>
 			</c:if>
 			<c:if test="${(success!=null&&!success)||(param.success!=null&&!param.success)}">
 				<div class="alert alert-block alert-warn">
 					<a class="close" data-dismiss="alert" href="#">×</a>
-					<h4 class="alert-heading">操作失败</h4>
+					<h4 class="alert-heading">failed</h4>
 				</div>
 			</c:if>
 
 			<p>&nbsp;</p>
-			<h2 style="text-align: center;">查看课题分配情况</h2>
+			<h2 style="text-align: center;">Thesis Assign</h2>
 
 			<table class="table table-bordered">
 				<thead>
 					<tr>
-						<th style="vertical-align: middle;">课题名称</th>
-						<th style="vertical-align: middle;">学生名称</th>
-						<th style="vertical-align: middle;" width="100px">操作</th>
+						<th style="vertical-align: middle;">Thesis name</th>
+						<th style="vertical-align: middle;">Student name</th>
+						<th style="vertical-align: middle;" width="100px">operate</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -40,7 +40,7 @@
 						<tr>
 							<td>${thesis.name}</td>
 							<td>${students[st.index].name}</td>
-							<td><a href="${ctx}/teacher/thesisAssign/unassign/${thesis.id}" class="btn btn-primary btn-mini">取消分配</a></td>
+							<td><a href="${ctx}/teacher/thesisAssign/unassign/${thesis.id}" class="btn btn-primary btn-mini">cancel</a></td>
 						</tr>
 					</c:forEach>
 				</tbody>
@@ -53,13 +53,13 @@
 	<div class="row">
 		<div class="span10 offset1">
 			<p>&nbsp;</p>
-			<h3 style="text-align: center;">查看未分配课题</h3>
+			<h3 style="text-align: center;">Unassigned thesis</h3>
 
 			<table class="table table-bordered">
 				<thead>
 					<tr>
-						<th style="vertical-align: middle;">课题名称</th>
-						<th style="vertical-align: middle;" width="100px">操作</th>
+						<th style="vertical-align: middle;">Thesis name</th>
+						<th style="vertical-align: middle;" width="100px">operate</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -67,7 +67,7 @@
 						<tr>
 							<td>${thesis.name}</td>
 							<td><c:if test="${!isOverMaxAssign}">
-									<a href="${ctx}/teacher/thesisPreview" class="btn btn-primary btn-mini">分配此课题</a>
+									<a href="${ctx}/teacher/thesisPreview" class="btn btn-primary btn-mini">Assign</a>
 								</c:if></td>
 						</tr>
 					</c:forEach>

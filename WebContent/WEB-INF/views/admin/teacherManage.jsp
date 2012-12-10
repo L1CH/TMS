@@ -5,22 +5,22 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>教师管理</title>
+<title>Teacher</title>
 </head>
 <body>
-	<h3>教师管理</h3>
+	<h3>Teacher</h3>
 
 	<table class="table table-bordered">
 		<thead>
 			<tr>
-				<th style="vertical-align: middle;">教工号</th>
-				<th style="vertical-align: middle;">姓名</th>
-				<th style="vertical-align: middle;">密码</th>
-				<th style="vertical-align: middle;">部门</th>
-				<th style="vertical-align: middle;">课题数</th>
-				<th style="vertical-align: middle;">电话</th>
-				<th style="vertical-align: middle;">邮箱</th>
-				<th style="vertical-align: middle;">操作</th>
+				<th style="vertical-align: middle;">no.</th>
+				<th style="vertical-align: middle;">name</th>
+				<th style="vertical-align: middle;">password</th>
+				<th style="vertical-align: middle;">Area</th>
+				<th style="vertical-align: middle;">Thesis number</th>
+				<th style="vertical-align: middle;">phone</th>
+				<th style="vertical-align: middle;">mail</th>
+				<th style="vertical-align: middle;">operate</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -33,8 +33,8 @@
 					<td>${teacher.subnum}</td>
 					<td>${teacher.tel}</td>
 					<td>${teacher.mail}</td>
-					<td><a href="${ctx}/admin/teacherManage/del/${teacher.id}" class="btn btn-mini">删除</a>&nbsp;<a
-						class="btn btn-mini">修改</a></td>
+					<td><a href="${ctx}/admin/teacherManage/del/${teacher.id}" class="btn btn-mini">Del</a>&nbsp;<a
+						class="btn btn-mini">Mod</a></td>
 				</tr>
 			</c:forEach>
 			<form name="teacher" action="${ctx}/admin/teacherManage/add" method="post">
@@ -50,8 +50,8 @@
 					<td><input type="text" class="input-small" name="subnum" /></td>
 					<td><input type="text" class="input-small" name="tel" /></td>
 					<td><input type="text" class="input-medium" name="mail" /></td>
-					<td><input type="submit" class="btn btn-primary btn-mini" value="添加" />&nbsp;<input type="submit"
-						class="btn btn-primary btn-mini" value="更新" /></td>
+					<td><input type="submit" class="btn btn-primary btn-mini" value="Add" />&nbsp;<input type="submit"
+						class="btn btn-primary btn-mini" value="Mod" /></td>
 				</tr>
 			</form>
 		</tbody>
@@ -63,7 +63,7 @@
 			$('#li-admin_people').addClass('active');
 			//实现点击表格条目，将内容复制到最后一行
 			$('tbody tr:not(:last)').click(function() {
-				var num = $('thead tr th').size() - 1;//减去最后操作一列
+				var num = $('thead tr th').size() - 1;//减去最后operate一列
 				for ( var i = 0; i < num; i++) {
 					var val = $(this).children(':nth(' + i + ')').text();
 					$('tbody tr:last td:nth(' + i + ') input').val(val);

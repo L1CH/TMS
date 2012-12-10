@@ -45,7 +45,7 @@ public class TeacherPingyuInputController extends BaseController {
 		logger.debug("POST-updatePingyuInputZhidao");
 		logger.debug("网页获取信息：{}", student);
 
-		//强制指定学生登录名
+		//强制指定学生no.
 		student.setLoginName(studentLoginName);
 
 		//保存
@@ -83,7 +83,7 @@ public class TeacherPingyuInputController extends BaseController {
 		logger.debug("POST-updatePingyuInputPingyue");
 		logger.debug("网页获取信息：{}", student);
 
-		//强制指定学生登录名
+		//强制指定学生no.
 		student.setLoginName(studentLoginName);
 
 		//保存
@@ -121,7 +121,7 @@ public class TeacherPingyuInputController extends BaseController {
 		logger.debug("POST-updatePingyuInputDabian");
 		logger.debug("网页获取信息：{}", student);
 
-		//强制指定学生登录名
+		//强制指定学生no.
 		student.setLoginName(studentLoginName);
 
 		//保存

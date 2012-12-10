@@ -14,7 +14,7 @@ public interface StudentService extends BaseService {
 
 	/**
 	 * 获取学生
-	 * @param loginName 登录名、学号
+	 * @param loginName no.、学号
 	 * @return Student 学生
 	 */
 	public Student getStudent(String loginName);
@@ -27,8 +27,8 @@ public interface StudentService extends BaseService {
 	public Student regStudent(Student student, Message message);
 
 	/**
-	 * 根据学生登录名（学号）获取学生信息
-	 * @param loginName 登录名、学号
+	 * 根据学生no.（学号）获取学生信息
+	 * @param loginName no.、学号
 	 * @return Student 学生
 	 */
 	public Student getStudentInfo(String loginName);
@@ -56,14 +56,14 @@ public interface StudentService extends BaseService {
 
 	/**
 	 * 获取学生中期警告信息
-	 * @param loginName 登录名、学号
+	 * @param loginName no.、学号
 	 * @return String 中期警告信息
 	 */
 	public String getMidternCheckWarn(String loginName);
 
 	/**
 	 * 获取学生中期检查信息
-	 * @param loginName 登录名、学号
+	 * @param loginName no.、学号
 	 * @return Student 学生
 	 */
 	public Student getMidternCheckInfo(String loginName);
@@ -76,7 +76,7 @@ public interface StudentService extends BaseService {
 	public Student saveMidternCheckInfo(Student student);
 
 	/**
-	 * 保存学生中期检查信息，老师操作，能够修改警告信息
+	 * 保存学生中期检查信息，老师operate，能够修改警告信息
 	 * @param student 学生
 	 * @return Student 学生，失败返回null
 	 */
@@ -84,7 +84,7 @@ public interface StudentService extends BaseService {
 
 	/**
 	 * 删除学生中期检查信息
-	 * @param studentLoginName 学生登录名、学号
+	 * @param studentLoginName 学生no.、学号
 	 * @return Student 学生，失败返回null
 	 */
 	public Student delMidternCheckWarn(String studentLoginName);
@@ -120,14 +120,14 @@ public interface StudentService extends BaseService {
 	/**
 	 * 保存学生评阅教师输入成绩
 	 * @param student 学生评阅成绩
-	 * @param teacherLoginName 教师登录名、教工号
+	 * @param teacherLoginName 教师no.、教工号
 	 * @return Student 学生，失败返回null
 	 */
 	public Student addScoreInputPingyue(Student student, String teacherLoginName);
 
 	/**
 	 * 删除学生评阅教师输入成绩
-	 * @param studentLoginName 学生登录名、学号
+	 * @param studentLoginName 学生no.、学号
 	 * @return Student 学生，失败返回null
 	 */
 	public Student delScoreInputPingyue(String studentLoginName);
@@ -135,14 +135,14 @@ public interface StudentService extends BaseService {
 	/**
 	 * 保存学生答辩小组输入成绩
 	 * @param student 学生答辩成绩
-	 * @param teacherLoginName 教师登录名、教工号
+	 * @param teacherLoginName 教师no.、教工号
 	 * @return Student 学生，失败返回null
 	 */
 	public Student addScoreInputDabian(Student student, String teacherLoginName);
 
 	/**
 	* 删除学生答辩小组输入成绩
-	* @param studentLoginName 学生登录名、学号
+	* @param studentLoginName 学生no.、学号
 	* @return Student 学生，失败返回null
 	*/
 	public Student delScoreInputDabian(String studentLoginName);

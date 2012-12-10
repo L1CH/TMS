@@ -34,7 +34,7 @@ public class AdminStudentMajorClassManageController extends BaseController{
 	@RequestMapping(value = {"/studentMajorManage/add"},method = RequestMethod.POST)
 	public String addStudentMajor(StudentMajor studentMajor,Model model){
 		
-		logger.debug("新增学生专业：{}",studentMajor.toString());
+		logger.debug("新增学生major：{}",studentMajor.toString());
 		
 		boolean success = false;
 		if(studentMajorServicce.addOrUpdateStudentMajor(studentMajor) != null){
@@ -57,7 +57,7 @@ public class AdminStudentMajorClassManageController extends BaseController{
 	
 	@RequestMapping(value = {"/studentClassManage/add"},method = RequestMethod.POST)
 	public String addStudentClass(StudentClass studentClass,Model model){
-		logger.debug("新增学生班级：{}",studentClass.toString());
+		logger.debug("新增学生class：{}",studentClass.toString());
 		
 		boolean success = false;
 		if(studentClassService.addOrUpdateStudentClass(studentClass) != null){

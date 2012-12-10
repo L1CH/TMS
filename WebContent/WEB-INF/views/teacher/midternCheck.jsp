@@ -12,20 +12,20 @@
 	<div class="row">
 		<div class="span12">
 			<p>&nbsp</p>
-			<h2 align="center">中期检查</h2>
+			<h2 align="center">Midtern Check</h2>
 			<p>&nbsp</p>
 
 			<table class="table table-bordered">
 				<thead>
 					<tr>
-						<td>学号</td>
-						<td>姓名</td>
-						<td>工作进度</td>
-						<td>质量</td>
-						<td>工作态度</td>
-						<td>出勤情况</td>
-						<td>警告内容</td>
-						<td>提出/修改警告</td>
+						<td>no.</td>
+						<td>name</td>
+						<td>progress</td>
+						<td>quantity</td>
+						<td>attitude</td>
+						<td>duty</td>
+						<td>warn</td>
+						<td>set/mod warn</td>
 					</tr>
 				</thead>
 				<tbody>
@@ -40,12 +40,12 @@
 							<td>${student.warn}</td>
 							<!-- IF -->
 							<c:if test="${student.warn!=null&&!student.warn.isEmpty()}">
-								<td><a href="${ctx}/teacher/midternCheck/warn/${student.loginName}" class="btn btn-mini">修改警告</a> <a
-									href="${ctx}/teacher/midternCheck/warn/${student.loginName}/delete" class="btn btn-mini">删除警告</a></td>
+								<td><a href="${ctx}/teacher/midternCheck/warn/${student.loginName}" class="btn btn-mini">Mod Warn</a> <a
+									href="${ctx}/teacher/midternCheck/warn/${student.loginName}/delete" class="btn btn-mini">Del Warn</a></td>
 							</c:if>
 							<!-- ELSE -->
 							<c:if test="${student.warn==null||student.warn.isEmpty()}">
-								<td><a href="${ctx}/teacher/midternCheck/warn/${student.loginName}" class="btn btn-mini">提出警告</a></td>
+								<td><a href="${ctx}/teacher/midternCheck/warn/${student.loginName}" class="btn btn-mini">Set Warn</a></td>
 							</c:if>
 							<!-- END -->
 						</tr>

@@ -15,7 +15,7 @@ import tms.base.model.IdEntity;
 public class StudentMajor extends IdEntity {
 	private static final long serialVersionUID = 2084180035575935501L;
 
-	private String name = "";//专业名称
+	private String name = "";//major名称
 
 	public StudentMajor() {
 		super();

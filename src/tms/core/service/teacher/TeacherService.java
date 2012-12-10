@@ -37,7 +37,7 @@ public interface TeacherService extends BaseService {
 
 	/**
 	 * 获取教师个人信息
-	 * @param loginName 登录名、教工号
+	 * @param loginName no.、教工号
 	 * @return Teacher
 	 */
 	public Teacher getTeacherInfo(String loginName);
@@ -51,7 +51,7 @@ public interface TeacherService extends BaseService {
 
 	/**
 	 * 获取教师指导学生列表
-	 * @param teacherLoginName 教师登录名、教工号
+	 * @param teacherLoginName 教师no.、教工号
 	 * @return List<Student>
 	 */
 	public List<Student> getTeachingStudents(String teacherLoginName);
@@ -65,14 +65,14 @@ public interface TeacherService extends BaseService {
 
 	/**
 	 * 获取教师课题列表
-	 * @param teacherLoginName 教师登录名、教工号
+	 * @param teacherLoginName 教师no.、教工号
 	 * @return List<Thesis>
 	 */
 	public List<Thesis> getTeacherThesises(String teacherLoginName);
 
 	/**
 	 * 获取教师未分配课题列表
-	 * @param teacherLoginName 教师登录名、教工号
+	 * @param teacherLoginName 教师no.、教工号
 	 * @return List<Thesis>
 	 */
 	public List<Thesis> getTeacherUnassignedThesises(String teacherLoginName);
@@ -115,7 +115,7 @@ public interface TeacherService extends BaseService {
 	public List<Thesis> getStudentsPreviewTheses(List<Thesis> theses);
 
 	/**
-	 * 获取学生预选的学生姓名
+	 * 获取学生预选的学生name
 	 * @param theses
 	 * @return
 	 */

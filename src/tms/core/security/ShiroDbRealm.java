@@ -23,7 +23,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * 自实现用户与权限查询.
- * 演示关系，密码用明文存储，因此使用默认 的SimpleCredentialsMatcher.
+ * 演示关系，password用明文存储，因此使用默认 的SimpleCredentialsMatcher.
  */
 public class ShiroDbRealm extends AuthorizingRealm {
 	protected Logger logger = LoggerFactory.getLogger(getClass());
@@ -94,7 +94,7 @@ public class ShiroDbRealm extends AuthorizingRealm {
 	}
 
 	/**
-	 * 自定义Authentication对象，使得Subject除了携带用户的登录名外还可以携带更多信息.
+	 * 自定义Authentication对象，使得Subject除了携带用户的no.外还可以携带更多信息.
 	 */
 	public static class ShiroUser implements Serializable {
 

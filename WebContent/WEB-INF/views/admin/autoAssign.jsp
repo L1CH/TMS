@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>主页</title>
+<title>Auto Assign</title>
 </head>
 <body>
 	<div class="row">
@@ -14,7 +14,7 @@
 			<c:if test="${(success!=null&&success)||(param.success!=null&&param.success)}">
 				<div class="alert alert-block alert-success">
 					<a class="close" data-dismiss="alert" href="#">×</a>
-					<h4 class="alert-heading">操作成功</h4>
+					<h4 class="alert-heading">success</h4>
 					<c:forEach items="${message.messages}" var="message">
 						<p>${message}</p>
 					</c:forEach>
@@ -23,7 +23,7 @@
 			<c:if test="${(success!=null&&!success)||(param.success!=null&&!param.success)}">
 				<div class="alert alert-block alert-warn">
 					<a class="close" data-dismiss="alert" href="#">×</a>
-					<h4 class="alert-heading">操作失败</h4>
+					<h4 class="alert-heading">failed</h4>
 					<c:forEach items="${message.messages}" var="message">
 						<p>${message}</p>
 					</c:forEach>
@@ -37,37 +37,37 @@
 	<div class="row">
 		<div class="span6 offset3">
 			<p>&nbsp;</p>
-			<h2 style="text-align: center;">自动分配</h2>
+			<h2 style="text-align: center;">Auto Assign</h2>
 
 			<div id="autoAssignInfo" class="form-horizontal">
 				<div class="control-group">
-					<label class="control-label">已分配课题数量：</label>
+					<label class="control-label">Assigned thesis number:</label>
 					<div class="controls">
 						<span class="input-medium uneditable-input">${thesisAssignedNum}</span>
 					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label">未分配课题数量：</label>
+					<label class="control-label">Unassigned thesis number:</label>
 					<div class="controls">
 						<span class="input-medium uneditable-input">${thesisUnassignedNum}</span>
 					</div>
 				</div>
 
 				<div class="control-group">
-					<label class="control-label">已配课题的学生数量：</label>
+					<label class="control-label">Assigned Student number:</label>
 					<div class="controls">
 						<span class="input-medium uneditable-input">${studentAssignedNum}</span>
 					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label">未分配课题的学生数量：</label>
+					<label class="control-label">Unassigned Student number:</label>
 					<div class="controls">
 						<span class="input-medium uneditable-input">${studentUnassignedNum}</span>
 					</div>
 				</div>
 
 				<div class="form-actions">
-					<a class="btn btn-primary" href="${ctx}/admin/autoAssign/start">进行自动分配</a>
+					<a class="btn btn-primary" href="${ctx}/admin/autoAssign/start">Auto Assign</a>
 				</div>
 			</div>
 

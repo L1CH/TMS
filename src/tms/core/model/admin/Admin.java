@@ -16,10 +16,10 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 public class Admin extends IdEntity implements User {
 	private static final long serialVersionUID = 4217558191841990227L;
 
-	private String loginName;//管理员登录名
-	private String name = "";//管理员姓名
-	private String password = "0";//密码
-	private String enable = "true";//是否启用
+	private String loginName;//管理员no.
+	private String name = "";//管理员name
+	private String password = "0";//password
+	private String enable = "true";//是否enable
 
 	public Admin() {
 		super();

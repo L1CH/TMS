@@ -11,25 +11,25 @@
 	<c:if test="${success!=null&&success}">
 		<div class="alert alert-block alert-success">
 			<a class="close" data-dismiss="alert" href="#">×</a>
-			<h4 class="alert-heading">操作成功</h4>
+			<h4 class="alert-heading">success</h4>
 		</div>
 	</c:if>
 	<c:if test="${success!=null&&!success}">
 		<div class="alert alert-block alert-error">
 			<a class="close" data-dismiss="alert" href="#">×</a>
-			<h4 class="alert-heading">操作失败</h4>
+			<h4 class="alert-heading">failed</h4>
 		</div>
 	</c:if>
 
-	<h3 align="center">学生最终课题分配结果</h3>
+	<h3 align="center">Student Thesis Result</h3>
 	<table id="studentTable" class="table table-bordered">
 		<thead>
 			<tr>
-				<td>课题名称</td>
-				<td>指导老师</td>
-				<td>题目类型</td>
-				<td>题目性质</td>
-				<td>承担方式</td>
+				<td>Thesis name</td>
+				<td>Advisor</td>
+				<td>type</td>
+				<td>property</td>
+				<td>mode</td>
 			</tr>
 		</thead>
 		<tbody>

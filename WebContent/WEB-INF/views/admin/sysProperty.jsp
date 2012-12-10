@@ -10,7 +10,7 @@
 </head>
 <body>
 	<p>&nbsp;</p>
-	<h3>系统属性修改</h3>
+	<h3>系统属性Mod</h3>
 
 	<table class="table table-bordered">
 		<thead>
@@ -18,7 +18,7 @@
 				<th style="vertical-align: middle;">ID</th>
 				<th style="vertical-align: middle;">字段说明</th>
 				<th style="vertical-align: middle;">数值</th>
-				<th style="vertical-align: middle;">操作</th>
+				<th style="vertical-align: middle;">operate</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -28,7 +28,7 @@
 						<td><input type="text" class="input-small" readonly="readonly" name="id" value="${sysProperty.id}" /></td>
 						<td><span class="input-xxlarge uneditable-input">${sysProperty.description}</span></td>
 						<td><input type="text" class="input-small" name="propVal" value="${sysProperty.propVal}" /></td>
-						<td><input type="submit" class="btn btn-primary" value="更新" /></td>
+						<td><input type="submit" class="btn btn-primary" value="Mod" /></td>
 					</tr>
 				</form>
 			</c:forEach>
@@ -44,7 +44,7 @@
 				<th style="vertical-align: middle;">ID</th>
 				<th style="vertical-align: middle;">字段说明</th>
 				<th style="vertical-align: middle;">数值</th>
-				<th style="vertical-align: middle;">操作</th>
+				<th style="vertical-align: middle;">operate</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -56,7 +56,7 @@
 						<td><span class="select_value" style="display: none;">${sysPermission.propVal}</span><select name="propVal"
 							class="input-small"><option value="true">是</option>
 								<option value="false">否</option></select></td>
-						<td><input type="submit" class="btn btn-primary" value="更新" /></td>
+						<td><input type="submit" class="btn btn-primary" value="Mod" /></td>
 					</tr>
 				</form>
 			</c:forEach>

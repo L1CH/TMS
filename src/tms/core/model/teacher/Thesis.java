@@ -26,8 +26,8 @@ public class Thesis extends IdEntity {
 	private String property = "";//性质
 	private String mode = "";//方式
 	private String assign = "";//分配方式
-	private String majorRestrict = "";//限制专业
-	private List<String> majorRes = new ArrayList<String>();//限制专业辅助变量，不计入数据库
+	private String majorRestrict = "";//限制major
+	private List<String> majorRes = new ArrayList<String>();//限制major辅助变量，不计入数据库
 	private Teacher teacher;//开设课题的教师
 
 	public Thesis() {

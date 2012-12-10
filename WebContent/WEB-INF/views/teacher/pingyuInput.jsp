@@ -17,13 +17,13 @@
 			<c:if test="${success!=null&&success}">
 				<div class="alert alert-block alert-success">
 					<a class="close" data-dismiss="alert" href="#">×</a>
-					<h4 class="alert-heading">修改成功</h4>
+					<h4 class="alert-heading">success</h4>
 				</div>
 			</c:if>
 			<c:if test="${success!=null&&!success}">
 				<div class="alert alert-block alert-error">
 					<a class="close" data-dismiss="alert" href="#">×</a>
-					<h4 class="alert-heading">修改失败</h4>
+					<h4 class="alert-heading">fail</h4>
 				</div>
 			</c:if>
 
@@ -32,21 +32,21 @@
 				<form:hidden path="id" />
 
 				<div class="control-group">
-					<label class="control-label">学号:</label>
+					<label class="control-label">no.:</label>
 					<div class="controls">
 						<span type="text" id="loginName" name="loginName" class="input-xlarge uneditable-input">${student.loginName}</span>
 					</div>
 				</div>
 
 				<div class="control-group">
-					<label class="control-label">姓名:</label>
+					<label class="control-label">name:</label>
 					<div class="controls">
 						<form:input path="name" cssClass="input-xlarge" />
 					</div>
 				</div>
 
 				<div class="control-group">
-					<label class="control-label">课题名称:</label>
+					<label class="control-label">Thesis name:</label>
 					<div class="controls">
 						<span type="text" id="thesisName" name="thesisName" class="input-xlarge uneditable-input">${thesisName}</span>
 					</div>
@@ -136,8 +136,8 @@
 				-->
 
 				<div class="form-actions">
-					<input type="submit" class="btn btn-primary" value="修改" />&nbsp;<input type="reset" class="btn" value="取消" />&nbsp;<a
-						href="${ctx}/teacher/scoreInput/redirect/${type}" class="btn btn-inverse">返回</a>
+					<input type="submit" class="btn btn-primary" value="Mod" />&nbsp;<input type="reset" class="btn" value="cancel" />&nbsp;<a
+						href="${ctx}/teacher/scoreInput/redirect/${type}" class="btn btn-inverse">Return</a>
 				</div>
 
 			</form:form>

@@ -14,10 +14,10 @@
 	<table class="table table-bordered">
 		<thead>
 			<tr>
-				<th style="vertical-align: middle;">学号</th>
-				<th style="vertical-align: middle;">姓名</th>
-				<th style="vertical-align: middle;">课题名称</th>
-				<th style="vertical-align: middle;">操作</th>
+				<th style="vertical-align: middle;">no.</th>
+				<th style="vertical-align: middle;">name</th>
+				<th style="vertical-align: middle;">Thesis name</th>
+				<th style="vertical-align: middle;">operate</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -26,7 +26,7 @@
 					<td>${student.loginName}</td>
 					<td>${student.name}</td>
 					<td>${studentsThesises[st.index].name}</td>
-					<td><a href="${ctx}/teacher/printManage/print/${student.loginName}" class="btn btn-mini">下载</a></td>
+					<td><a href="${ctx}/teacher/printManage/print/${student.loginName}" class="btn btn-mini">download</a></td>
 				</tr>
 			</c:forEach>
 		</tbody>

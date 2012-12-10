@@ -18,59 +18,59 @@
 					<a class="close" data-dismiss="alert" href="#">×</a>
 					<c:choose>
 						<c:when test="${shiroLoginFailure=='org.apache.shiro.authc.UnknownAccountException'}">
-							<h4 class="alert-heading">用户不存在!</h4>
+							<h4 class="alert-heading">User not available!</h4>
 						</c:when>
 						<c:when test="${shiroLoginFailure=='org.apache.shiro.authc.IncorrectCredentialsException'}">
-							<h4 class="alert-heading">用户名、密码错误!</h4>
+							<h4 class="alert-heading">username password not match!</h4>
 						</c:when>
 						<c:otherwise>
-							<h4 class="alert-heading">其他错误!</h4>
+							<h4 class="alert-heading">other!</h4>
 						</c:otherwise>
 					</c:choose>
-					<p>登录失败，请重试!</p>
+					<p>Login failed, please relogin!</p>
 				</div>
 			</c:if>
 
 			<c:if test="${param.unauthorized!=null}">
 				<div class="alert alert-block">
 					<a class="close" data-dismiss="alert" href="#">×</a>
-					<h4 class="alert-heading">提示!</h4>
-					<p>请使用正确账户进入.</p>
+					<h4 class="alert-heading">Warn!</h4>
+					<p>choose correct user account type.</p>
 				</div>
 			</c:if>
 
 			<form:form id="loginForm" action="${ctx}/login" method="post" cssClass="form-horizontal">
 				<div class="control-group">
-					<label class="control-label">用户名:</label>
+					<label class="control-label">username:</label>
 					<div class="controls">
 						<input type="text" id="username" name="username" value="${username}" class="input-xlarge" />
 					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label">密码:</label>
+					<label class="control-label">password:</label>
 					<div class="controls">
 						<input type="password" id="password" name="password" class="input-xlarge" />
 					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label">类型:</label>
+					<label class="control-label">type:</label>
 					<div class="controls">
 						<select id="roleType" name="roleType">
-							<option value="student">学生</option>
-							<option value="teacher">教师</option>
-							<option value="admin">管理员</option>
+							<option value="student">student</option>
+							<option value="teacher">teacher</option>
+							<option value="admin">admin</option>
 						</select>
 					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label">自动登录:</label>
+					<label class="control-label">Auto Login:</label>
 					<div class="controls">
-						<label class="checkbox"> <input type="checkbox" id="rememberMe" name="rememberMe" />记住密码
+						<label class="checkbox"> <input type="checkbox" id="rememberMe" name="rememberMe" />Remember Password
 						</label>
 					</div>
 				</div>
 				<div class="form-actions">
-					<input type="submit" class="btn btn-primary" value="登录" /> <input type="reset" class="btn" value="重置" />
+					<input type="submit" class="btn btn-primary" value="Login" /> <input type="reset" class="btn" value="Reset" />
 				</div>
 			</form:form>
 		</div>

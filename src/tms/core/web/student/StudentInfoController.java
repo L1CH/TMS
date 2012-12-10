@@ -41,11 +41,11 @@ public class StudentInfoController extends BaseController {
 		Student student = studentService.getStudentInfo(loginName);
 		model.addAttribute("student", student);
 
-		//添加专业列表
+		//添加major列表
 		List<StudentMajor> majors = studentMajorService.getStudentMajors();
 		model.addAttribute("majors", majors);
 
-		//添加班级列表
+		//添加class列表
 		List<StudentClass> stuClasses = studentClassService.getStudentClasses();
 		model.addAttribute("stuClasses", stuClasses);
 
@@ -58,7 +58,7 @@ public class StudentInfoController extends BaseController {
 		logger.debug("POST-modInfo");
 
 		logger.debug("网页获取信息：{}", student);
-		//强制指定用户登录名
+		//强制指定用户no.
 		String loginName = SecurityUtils.getSubject().getPrincipal().toString();
 		student.setLoginName(loginName);
 
@@ -69,11 +69,11 @@ public class StudentInfoController extends BaseController {
 		}
 		model.addAttribute("success", success);
 
-		//添加专业列表
+		//添加major列表
 		List<StudentMajor> majors = studentMajorService.getStudentMajors();
 		model.addAttribute("majors", majors);
 
-		//添加班级列表
+		//添加class列表
 		List<StudentClass> stuClasses = studentClassService.getStudentClasses();
 		model.addAttribute("stuClasses", stuClasses);
 

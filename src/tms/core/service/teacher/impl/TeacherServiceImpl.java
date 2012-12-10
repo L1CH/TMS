@@ -113,11 +113,11 @@ public class TeacherServiceImpl extends BaseServiceImpl implements TeacherServic
 		Teacher _t = teacherDao.findByLoginName(t.getLoginName());
 		Assert.notNull(_t);
 
-		//判断是否需要修改密码
+		//判断是否需要修改password
 		String pass = t.getPassword();
 		if (StringUtils.isNotEmpty(pass)) {
 			_t.setPassword(pass);
-			logger.debug("用户：{} 修改密码", _t.getLoginName());
+			logger.debug("用户：{} 修改password", _t.getLoginName());
 		}
 
 		_t.setName(t.getName());
@@ -229,7 +229,7 @@ public class TeacherServiceImpl extends BaseServiceImpl implements TeacherServic
 	public Thesis saveTeacherThesis(Thesis thesis, String teacherLoginName) {
 		if (teacherDao.findByLoginName(teacherLoginName) == null)
 			return null;
-		//处理专业限制字符串
+		//处理major限制字符串
 		List<String> majors = thesis.getMajorRes();
 		String majorRestrict = StringUtils.join(majors, ',');
 		majorRestrict = StringUtils.stripToEmpty(majorRestrict);
@@ -270,7 +270,7 @@ public class TeacherServiceImpl extends BaseServiceImpl implements TeacherServic
 	@Override
 	@Transactional(readOnly = false)
 	public Thesis modTeacherThesis(Long thesisId, Thesis newThesis) {
-		//处理专业限制字符串
+		//处理major限制字符串
 		List<String> majors = newThesis.getMajorRes();
 		String majorRestrict = StringUtils.join(majors, ',');
 		majorRestrict = StringUtils.stripToEmpty(majorRestrict);

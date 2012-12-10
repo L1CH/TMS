@@ -15,8 +15,8 @@ import tms.base.model.IdEntity;
 public class News extends IdEntity {
 	private static final long serialVersionUID = -4082879836928849616L;
 
-	private String title = "";//消息标题
-	private String message = "";//消息内容
+	private String title = "";//Message Title
+	private String message = "";//Message Body
 	private String receiver = "";//发送对象
 
 	public News() {

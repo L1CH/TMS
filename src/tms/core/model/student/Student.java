@@ -17,14 +17,14 @@ public class Student extends IdEntity implements User {
 	private static final long serialVersionUID = -1349146988009388680L;
 
 	private String loginName;//学号
-	private String name = "";//姓名
-	private String gender = "";//性别
+	private String name = "";//name
+	private String gender = "";//gender
 	private Double credit = 0d;//绩点
-	private String phone = "";//电话
-	private String email = "";//邮箱
-	private String password = "0";//密码
-	private String major = "";//专业
-	private String stuClass = "";//班级
+	private String phone = "";//phone
+	private String email = "";//mail
+	private String password = "0";//password
+	private String major = "";//major
+	private String stuClass = "";//class
 	private Long thesisId = 0L;//选中课题id
 	//private String assign = "";//分配状态
 	private String ktup = "";//开题报告

@@ -12,7 +12,7 @@
 <body>
 <div>
 	<div><h1>页面不存在.</h1></div>
-	<div><a href="<c:url value="/"/>">返回首页</a></div>
+	<div><a href="<c:url value="/"/>">Return首页</a></div>
 </div>
 </body>
 </html>

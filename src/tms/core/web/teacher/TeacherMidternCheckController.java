@@ -57,7 +57,7 @@ public class TeacherMidternCheckController extends BaseController {
 
 		logger.debug("网页获取信息：{}", student);
 
-		//强制指定学生登录名
+		//强制指定学生no.
 		student.setLoginName(studentLoginName);
 
 		//保存

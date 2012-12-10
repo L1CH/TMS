@@ -13,7 +13,7 @@
 		<div class="span8 offset2">
 			<shiro:guest>
 				<c:if test="${allNewses!=null}">
-					<h3>全体通知：</h3>
+					<h3>Info:</h3>
 					<c:forEach items="${allNewses}" var="news" varStatus="st">
 						<div class="alert alert-block alert-info">
 							<a class="close" data-dismiss="alert" href="#">×</a>
@@ -26,7 +26,7 @@
 
 			<shiro:hasRole name="ROLE_STUDENT">
 				<c:if test="${studentNewses!=null}">
-					<h3>学生通知：</h3>
+					<h3>Student Info:</h3>
 					<c:forEach items="${studentNewses}" var="news" varStatus="st">
 						<div class="alert alert-block alert-info">
 							<a class="close" data-dismiss="alert" href="#">×</a>
@@ -39,7 +39,7 @@
 
 			<shiro:hasRole name="ROLE_TEACHER">
 				<c:if test="${teacherNewses!=null}">
-					<h3>教师通知：</h3>
+					<h3>Teacher Info:</h3>
 					<c:forEach items="${teacherNewses}" var="news" varStatus="st">
 						<div class="alert alert-block alert-info">
 							<a class="close" data-dismiss="alert" href="#">×</a>
@@ -51,7 +51,7 @@
 			</shiro:hasRole>
 
 			<shiro:hasRole name="ROLE_ADMIN">
-				<h3>管理员通知：</h3>
+				<h3>Admin Info:</h3>
 				<c:forEach items="${adminNewses}" var="news" varStatus="st">
 					<div class="alert alert-block alert-info">
 						<a class="close" data-dismiss="alert" href="#">×</a>
@@ -67,13 +67,13 @@
 
 	<div class="row">
 		<div class="span8 offset2">
-			<h3>下载</h3>
+			<h3>Download</h3>
 			<table class="table table-bordered" style="margin-top: 20px;">
 				<tbody>
 					<c:forEach items="${papers}" var="paper">
 						<tr>
 							<td width="80%">${paper.description}</td>
-							<td><a href="${ctx}/file/paper/${paper.filename}">下载</a></td>
+							<td><a href="${ctx}/file/paper/${paper.filename}">download</a></td>
 						</tr>
 					</c:forEach>
 				</tbody>

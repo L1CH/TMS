@@ -12,13 +12,13 @@
 	<div class="row">
 		<div class="span6 offset3">
 			<p>&nbsp</p>
-			<h2 align="center">中期检查</h2>
+			<h2 align="center">Midtern Check</h2>
 			<p>&nbsp</p>
 
 			<c:if test="${warn!=null&&!warn.isEmpty()}">
 				<div class="alert alert-block">
 					<a class="close" data-dismiss="alert" href="#">×</a>
-					<h4 class="alert-heading">警告信息</h4>
+					<h4 class="alert-heading">Warn</h4>
 					<p>${warn}</p>
 				</div>
 			</c:if>
@@ -26,13 +26,13 @@
 			<c:if test="${success!=null&&success}">
 				<div class="alert alert-block alert-success">
 					<a class="close" data-dismiss="alert" href="#">×</a>
-					<h4 class="alert-heading">修改成功</h4>
+					<h4 class="alert-heading">success</h4>
 				</div>
 			</c:if>
 			<c:if test="${success!=null&&!success}">
 				<div class="alert alert-block alert-warn">
 					<a class="close" data-dismiss="alert" href="#">×</a>
-					<h4 class="alert-heading">修改失败</h4>
+					<h4 class="alert-heading">fail</h4>
 				</div>
 			</c:if>
 
@@ -41,42 +41,42 @@
 				<form:hidden path="id" />
 
 				<div class="control-group">
-					<label class="control-label">学号:</label>
+					<label class="control-label">no.:</label>
 					<div class="controls">
 						<span type="text" id="loginName" name="loginName" class="input-xlarge uneditable-input">${student.loginName}</span>
 					</div>
 				</div>
 
 				<div class="control-group">
-					<label class="control-label">工作进度:</label>
+					<label class="control-label">progress:</label>
 					<div class="controls">
 						<form:input path="progress" size="20" cssClass="input-xlarge" />
 					</div>
 				</div>
 
 				<div class="control-group">
-					<label class="control-label">质量:</label>
+					<label class="control-label">quantity:</label>
 					<div class="controls">
 						<form:input path="quality" size="20" cssClass="input-xlarge" />
 					</div>
 				</div>
 
 				<div class="control-group">
-					<label class="control-label">工作态度:</label>
+					<label class="control-label">attitude:</label>
 					<div class="controls">
 						<form:input path="attitude" size="20" cssClass="input-xlarge" />
 					</div>
 				</div>
 
 				<div class="control-group">
-					<label class="control-label">出勤情况:</label>
+					<label class="control-label">duty:</label>
 					<div class="controls">
 						<form:input path="duty" size="20" cssClass="input-xlarge" />
 					</div>
 				</div>
 
 				<div class="form-actions">
-					<input type="submit" class="btn btn-primary" value="修改" /> <input type="reset" class="btn" value="取消" />
+					<input type="submit" class="btn btn-primary" value="Mod" /> <input type="reset" class="btn" value="cancel" />
 				</div>
 
 			</form:form>

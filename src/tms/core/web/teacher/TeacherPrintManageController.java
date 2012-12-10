@@ -83,13 +83,13 @@ public class TeacherPrintManageController extends BaseController {
 		if (subname == null)
 			subname = NULL;
 
-		String major = student.getMajor();//专业名称
+		String major = student.getMajor();//major名称
 		if (major == null)
 			major = NULL;
-		String classno = student.getStuClass();//班级名称
+		String classno = student.getStuClass();//class名称
 		if (classno == null)
 			classno = NULL;
-		String name = student.getName();//学生姓名
+		String name = student.getName();//学生name
 		if (name == null)
 			name = NULL;
 		String proj_desc = student.getProjDesc();//描述
@@ -756,7 +756,7 @@ public class TeacherPrintManageController extends BaseController {
 		out.write("\r\n");
 		out.write("<p class=MsoNormal style='margin-left:35.0pt;text-indent:21.0pt;line-height:\r\n");
 		out.write("24.0pt;mso-line-height-rule:exactly'><span style='font-size:14.0pt;font-family:\r\n");
-		out.write("宋体'>学生姓名 <u><span lang=EN-US style='color:black'><span\r\n");
+		out.write("宋体'>学生name <u><span lang=EN-US style='color:black'><span\r\n");
 		out.write("style='mso-spacerun:yes'></span></span><span\r\n");
 		out.write("style='color:black'>" + name + "<span lang=EN-US><span\r\n");
 		out.write("style='mso-spacerun:yes'>\r\n");

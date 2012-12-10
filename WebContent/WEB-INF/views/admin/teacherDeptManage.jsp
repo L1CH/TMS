@@ -5,31 +5,31 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>教师部门管理</title>
+<title>TeacherArea管理</title>
 </head>
 <body>
 	<div class="row">
 		<div class="span6 offset3">
-			<h3 style="text-align: center;">教师部门管理</h3>
+			<h3 style="text-align: center;">Teacher Area</h3>
 
 			<table class="table table-bordered">
 				<thead>
 					<tr>
-						<th style="vertical-align: middle;">部门名称</th>
-						<th style="vertical-align: middle;">操作</th>
+						<th style="vertical-align: middle;">Area</th>
+						<th style="vertical-align: middle;">operate</th>
 					</tr>
 				</thead>
 				<tbody>
 					<c:forEach items="${teacherDepts}" var="teacherDept" varStatus="st">
 						<tr>
 							<td>${teacherDept.name}</td>
-							<td><a href="${ctx}/admin/teacherDeptManage/del/${teacherDept.id}" class="btn btn-mini">删除</a></td>
+							<td><a href="${ctx}/admin/teacherDeptManage/del/${teacherDept.id}" class="btn btn-mini">Del</a></td>
 						</tr>
 					</c:forEach>
 					<form name="teacherDept" action="${ctx}/admin/teacherDeptManage/add" method="post">
 						<tr>
 							<td><input type="text" class="input-mini" name="name" /></td>
-							<td><input type="submit" class="btn btn-primary btn-mini" value="添加" /></td>
+							<td><input type="submit" class="btn btn-primary btn-mini" value="Add" /></td>
 						</tr>
 					</form>
 				</tbody>

@@ -16,7 +16,7 @@
 			<c:if test="${param.successMessage!=null}">
 				<div class="alert alert-block alert-success">
 					<a class="close" data-dismiss="alert" href="#">×</a>
-					<h4 class="alert-heading">成功！</h4>
+					<h4 class="alert-heading">success</h4>
 					<p>${param.successMessage}</p>
 				</div>
 			</c:if>
@@ -25,25 +25,25 @@
 			<c:if test="${param.infoMessage!=null}">
 				<div class="alert alert-block alert-info">
 					<a class="close" data-dismiss="alert" href="#">×</a>
-					<h4 class="alert-heading">提示消息</h4>
+					<h4 class="alert-heading">info</h4>
 					<p>${param.infoMessage}</p>
 				</div>
 			</c:if>
 			<!-- /提示消息 -->
-			<!-- 警告消息 -->
+			<!--  Warn消息 -->
 			<c:if test="${param.warnMessage!=null}">
 				<div class="alert alert-block">
 					<a class="close" data-dismiss="alert" href="#">×</a>
-					<h4 class="alert-heading">警告消息</h4>
+					<h4 class="alert-heading"> Warn</h4>
 					<p>${param.warnMessage}</p>
 				</div>
 			</c:if>
-			<!-- /警告消息 -->
+			<!-- / Warn消息 -->
 			<!-- 错误消息 -->
 			<c:if test="${param.errorMessage!=null}">
 				<div class="alert alert-block alert-error">
 					<a class="close" data-dismiss="alert" href="#">×</a>
-					<h4 class="alert-heading">错误消息</h4>
+					<h4 class="alert-heading">error</h4>
 					<p>${param.errorMessage}</p>
 				</div>
 			</c:if>

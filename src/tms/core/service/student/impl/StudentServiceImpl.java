@@ -108,11 +108,11 @@ public class StudentServiceImpl extends BaseServiceImpl implements StudentServic
 		Student _s = studentDao.findByLoginName(s.getLoginName());
 		Assert.notNull(_s);
 
-		//判断是否需要修改密码
+		//判断是否需要修改password
 		String pass = s.getPassword();
 		if (StringUtils.isNotEmpty(pass)) {
 			_s.setPassword(pass);
-			logger.debug("用户：{} 修改密码", _s.getLoginName());
+			logger.debug("用户：{} 修改password", _s.getLoginName());
 		}
 
 		_s.setName(s.getName());
@@ -206,7 +206,7 @@ public class StudentServiceImpl extends BaseServiceImpl implements StudentServic
 		return studentDao.save(_s);
 	}
 
-	private static final String ZHIDAO_NOT_INPUT = "未输入";
+	private static final String ZHIDAO_NOT_INPUT = "None";
 	private static final String ZHIDAO_INPUT = "已输入";
 
 	@Override
@@ -231,7 +231,7 @@ public class StudentServiceImpl extends BaseServiceImpl implements StudentServic
 		for (Student s : students) {
 			int py1 = s.getPy1grade();
 			int py2 = s.getPy2grade();
-			String status = "未输入";
+			String status = "None";
 
 			//根据记录查询
 			PingyueRecord _py = pingyueRecordDao.findByStudentId(s.getId());
@@ -251,7 +251,7 @@ public class StudentServiceImpl extends BaseServiceImpl implements StudentServic
 		for (Student s : students) {
 			int db1 = s.getDb1grade();
 			int db2 = s.getDb2grade();
-			String status = "未输入";
+			String status = "None";
 
 			//根据记录查询
 			DabianRecord _db = dabianRecordDao.findByStudentId(s.getId());

@@ -11,29 +11,29 @@
 	<c:if test="${success!=null&&success}">
 		<div class="alert alert-block alert-success">
 			<a class="close" data-dismiss="alert" href="#">×</a>
-			<h4 class="alert-heading">操作成功</h4>
+			<h4 class="alert-heading">success</h4>
 		</div>
 	</c:if>
 	<c:if test="${success!=null&&!success}">
 		<div class="alert alert-block alert-error">
 			<a class="close" data-dismiss="alert" href="#">×</a>
-			<h4 class="alert-heading">操作失败，可能是该志愿顺被已经被使用</h4>
+			<h4 class="alert-heading">failed，可能是该志愿顺被已经被使用</h4>
 		</div>
 	</c:if>
 
 	<c:if test="${studentOrders.size()>0}">
-		<h3 align="center">学生个人预选信息</h3>
+		<h3 align="center">Student个人预选信息</h3>
 		<table id="studentTable" class="table table-bordered">
 			<thead>
 				<tr>
-					<td>志愿顺序</td>
-					<td>课题名称</td>
-					<td>指导老师</td>
-					<td>题目类型</td>
-					<td>题目性质</td>
-					<td>承担方式</td>
+					<td>Order</td>
+					<td>Thesis name</td>
+					<td>Advisor</td>
+					<td>题目type</td>
+					<td>题目property</td>
+					<td>承担mode</td>
 					<td>已被预选次数</td>
-					<td style="width: 140px;">操作</td>
+					<td style="width: 140px;">operate</td>
 				</tr>
 			</thead>
 			<tbody>
@@ -59,7 +59,7 @@
 						<td>${studentThesis.property}</td>
 						<td>${studentThesis.mode}</td>
 						<td>${studentCounts[st.index]}</td>
-						<td><a class="btn btn-primary btn-mini" href="${ctx}/student/thesisManage/del/${studentThesis.id}">删除</a></td>
+						<td><a class="btn btn-primary btn-mini" href="${ctx}/student/thesisManage/del/${studentThesis.id}">Del</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>
@@ -68,18 +68,18 @@
 
 	<c:if test="${studentOrders.size()<3}">
 		<br />
-		<h3 align="center">选择课题</h3>
+		<h3 align="center">选择Thesis</h3>
 
 		<table id="table" class="table table-bordered">
 			<thead>
 				<tr>
-					<td>课题名称</td>
-					<td>指导老师</td>
-					<td>题目类型</td>
-					<td>题目性质</td>
-					<td>承担方式</td>
+					<td>Thesis name</td>
+					<td>Advisor</td>
+					<td>题目type</td>
+					<td>题目property</td>
+					<td>承担mode</td>
 					<td>已被预选次数</td>
-					<td style="width: 140px;">操作</td>
+					<td style="width: 140px;">operate</td>
 				</tr>
 			</thead>
 			<tbody>

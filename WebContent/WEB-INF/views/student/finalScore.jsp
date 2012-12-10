@@ -11,7 +11,7 @@
 <body>
 	<div class="row">
 		<div class="span6 offset3">
-			<h2 align="center">学生个人成绩</h2>
+			<h2 align="center">Student个人成绩</h2>
 			<p>&nbsp</p>
 
 			<form:form id="score" modelAttribute="student" method="post" cssClass="form-horizontal">
@@ -19,26 +19,26 @@
 				<form:hidden path="id" />
 
 				<div class="control-group">
-					<label class="control-label">学号:</label>
+					<label class="control-label">no.:</label>
 					<div class="controls">
 						<form:input path="loginName" cssClass="input-large uneditable-input" />
 					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label">姓名:</label>
+					<label class="control-label">name:</label>
 					<div class="controls">
 						<form:input path="name" cssClass="input-large uneditable-input" />
 					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label">课题名称:</label>
+					<label class="control-label">Thesis name:</label>
 					<div class="controls">
 						<span type="text" id="thesisName" class="input-large uneditable-input">${thesis.name}</span>
 					</div>
 				</div>
 
 				<div class="control-group">
-					<label class="control-label">总分:</label>
+					<label class="control-label">Total:</label>
 					<div class="controls">
 						<div class="input-append">
 							<form:input path="grade" cssClass="input-mini uneditable-input" cssStyle="text-align: right;" />
@@ -50,91 +50,91 @@
 				<div class="control-group">
 					<label class="control-label"></label>
 					<div class="controls">
-						<a class="btn btn-info" data-toggle="collapse" href="#detail">点此显示详细分数</a>
+						<a class="btn btn-info" data-toggle="collapse" href="#detail">Click for details</a>
 					</div>
 				</div>
 
 				<div id="detail" class="collapse in">
 					<div class="control-group">
-						<label class="control-label">毕业设计(论文)质量:</label>
+						<label class="control-label">Thesis (paper)quantity:</label>
 						<div class="controls">
 							<div class="input-append">
 								<form:input path="zd1grade" cssClass="input-mini uneditable-input" cssStyle="text-align: right;" />
 								<span class="add-on">/100</span>
 							</div>
-							<span class="help-inline">折合系数: 0.15</span>
+							<span class="help-inline">ratio:0.15</span>
 						</div>
 					</div>
 					<div class="control-group">
-						<label class="control-label">绘图与文字表达技巧:</label>
+						<label class="control-label">Presentation:</label>
 						<div class="controls">
 							<div class="input-append">
 								<form:input path="zd2grade" cssClass="input-mini uneditable-input" cssStyle="text-align: right;" />
 								<span class="add-on">/100</span>
 							</div>
-							<span class="help-inline">折合系数: 0.05</span>
+							<span class="help-inline">ratio:0.05</span>
 						</div>
 					</div>
 					<div class="control-group">
-						<label class="control-label">独立工作能力:</label>
+						<label class="control-label">Solving:</label>
 						<div class="controls">
 							<div class="input-append">
 								<form:input path="zd3grade" cssClass="input-mini uneditable-input" cssStyle="text-align: right;" />
 								<span class="add-on">/100</span>
 							</div>
-							<span class="help-inline">折合系数: 0.05</span>
+							<span class="help-inline">ratio:0.05</span>
 						</div>
 					</div>
 					<div class="control-group">
-						<label class="control-label">工作态度:</label>
+						<label class="control-label">attitude:</label>
 						<div class="controls">
 							<div class="input-append">
 								<form:input path="zd4grade" cssClass="input-mini uneditable-input" cssStyle="text-align: right;" />
 								<span class="add-on">/100</span>
 							</div>
-							<span class="help-inline">折合系数: 0.05</span>
+							<span class="help-inline">ratio:0.05</span>
 						</div>
 					</div>
 
 					<div class="control-group">
-						<label class="control-label">毕业设计(论文)水平:</label>
+						<label class="control-label">Thesis (paper) Quantity:</label>
 						<div class="controls">
 							<div class="input-append">
 								<form:input path="py1grade" cssClass="input-mini uneditable-input" cssStyle="text-align: right;" />
 								<span class="add-on">/100</span>
 							</div>
-							<span class="help-inline">折合系数: 0.2</span>
+							<span class="help-inline">ratio:0.2</span>
 						</div>
 					</div>
 					<div class="control-group">
-						<label class="control-label">图、文质量:</label>
+						<label class="control-label">quantity:</label>
 						<div class="controls">
 							<div class="input-append">
 								<form:input path="py2grade" cssClass="input-mini uneditable-input" cssStyle="text-align: right;" />
 								<span class="add-on">/100</span>
 							</div>
-							<span class="help-inline">折合系数: 0.1</span>
+							<span class="help-inline">ratio:0.1</span>
 						</div>
 					</div>
 
 					<div class="control-group">
-						<label class="control-label">口头汇报:</label>
+						<label class="control-label">Oral Presentation:</label>
 						<div class="controls">
 							<div class="input-append">
 								<form:input path="db1grade" cssClass="input-mini uneditable-input" cssStyle="text-align: right;" />
 								<span class="add-on">/100</span>
 							</div>
-							<span class="help-inline">折合系数: 0.1</span>
+							<span class="help-inline">ratio:0.1</span>
 						</div>
 					</div>
 					<div class="control-group">
-						<label class="control-label">回答问题正确性:</label>
+						<label class="control-label">Answer Skill:</label>
 						<div class="controls">
 							<div class="input-append">
 								<form:input path="db2grade" cssClass="input-mini uneditable-input" cssStyle="text-align: right;" />
 								<span class="add-on">/100</span>
 							</div>
-							<span class="help-inline">折合系数: 0.3</span>
+							<span class="help-inline">ratio:0.3</span>
 						</div>
 					</div>
 				</div>
