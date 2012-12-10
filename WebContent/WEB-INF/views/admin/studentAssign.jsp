@@ -83,7 +83,7 @@
 										<c:forEach items="${unassignedThesises}" var="thesis" varStatus="st">
 											<option value="${thesis.id}">${thesis.name}</option>
 										</c:forEach>
-								</select>&nbsp;<input type="submit" class="btn btn-primary btn-mini" value="选择"></input></td>
+								</select>&nbsp;<input type="submit" class="btn btn-primary btn-mini" value="Select"></input></td>
 							</form>
 						</tr>
 					</c:forEach>

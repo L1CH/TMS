@@ -347,7 +347,7 @@ public class TeacherServiceImpl extends BaseServiceImpl implements TeacherServic
 				if (s.getThesisId() == 0L)
 					assigns.add("0");
 				else {
-					assigns.add("无法选择");
+					assigns.add("Cannot Select");
 				}
 
 			}

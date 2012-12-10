@@ -34,7 +34,7 @@ public interface ThesisService extends BaseService {
 	public List<Student> getUnassignedThesisesStudents();
 
 	/**
-	 * 获取未分配和未选择的课题
+	 * 获取未分配和未Select的课题
 	 * @param studentLoginName
 	 * @return List<Thesis>
 	 */

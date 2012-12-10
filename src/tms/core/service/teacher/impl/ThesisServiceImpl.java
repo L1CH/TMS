@@ -112,7 +112,7 @@ public class ThesisServiceImpl extends BaseServiceImpl implements ThesisService 
 				}
 			}
 		}
-		logger.debug("获取未分配且未选择课题数量：{}", thesises.size());
+		logger.debug("获取未分配且未Select课题数量：{}", thesises.size());
 
 		return thesises;
 	}

@@ -94,7 +94,7 @@
 						<form action="${ctx}/student/thesisManage/choose/${thesis.id}" method="POST">
 							<td><select style="width: 90px" name="order"><option value="1">First</option>
 									<option value="2">Second</option>
-									<option value="3">Third</option></select><input type="submit" class="btn btn-primary btn-mini" value="选择"></input></td>
+									<option value="3">Third</option></select><input type="submit" class="btn btn-primary btn-mini" value="Select"></input></td>
 						</form>
 					</tr>
 				</c:forEach>
