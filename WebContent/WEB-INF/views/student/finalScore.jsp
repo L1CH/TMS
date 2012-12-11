@@ -6,12 +6,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>主页</title>
+<title>Student Score</title>
 </head>
 <body>
 	<div class="row">
 		<div class="span6 offset3">
-			<h2 align="center">Student个人成绩</h2>
+			<h2 align="center">Student Score</h2>
 			<p>&nbsp</p>
 
 			<form:form id="score" modelAttribute="student" method="post" cssClass="form-horizontal">

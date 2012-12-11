@@ -69,8 +69,8 @@
 					<label class="control-label">gender:</label>
 					<div class="controls">
 						<form:select path="gender" cssClass="input-xlarge">
-							<form:option value="男">男</form:option>
-							<form:option value="女">女</form:option>
+							<form:option value="男">Male</form:option>
+							<form:option value="女">Female</form:option>
 						</form:select>
 					</div>
 				</div>
